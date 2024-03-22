@@ -1,0 +1,731 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DE3EF6952BAC474F00F3A996 /* DessertDelightsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3EF6942BAC474F00F3A996 /* DessertDelightsApp.swift */; };
+		DE3EF6972BAC474F00F3A996 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3EF6962BAC474F00F3A996 /* ContentView.swift */; };
+		DE3EF6992BAC475000F3A996 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE3EF6982BAC475000F3A996 /* Assets.xcassets */; };
+		DE3EF69C2BAC475000F3A996 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE3EF69B2BAC475000F3A996 /* Preview Assets.xcassets */; };
+		DE3EF6A62BAC475000F3A996 /* DessertDelightsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3EF6A52BAC475000F3A996 /* DessertDelightsTests.swift */; };
+		DE3EF6B02BAC475000F3A996 /* DessertDelightsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3EF6AF2BAC475000F3A996 /* DessertDelightsUITests.swift */; };
+		DE3EF6B22BAC475000F3A996 /* DessertDelightsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3EF6B12BAC475000F3A996 /* DessertDelightsUITestsLaunchTests.swift */; };
+		DE3EF6C12BAC50DE00F3A996 /* MainDependencyContainer .swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3EF6C02BAC50DE00F3A996 /* MainDependencyContainer .swift */; };
+		DE3EF6C32BAC513F00F3A996 /* MainNavigationController .swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3EF6C22BAC513F00F3A996 /* MainNavigationController .swift */; };
+		DE3EF6C52BAC514E00F3A996 /* MainViewModel .swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3EF6C42BAC514E00F3A996 /* MainViewModel .swift */; };
+		DE3EF6C72BAC515700F3A996 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3EF6C62BAC515700F3A996 /* MainView.swift */; };
+		DE3EF6D42BACD1D700F3A996 /* NiblessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3EF6CF2BACD1D700F3A996 /* NiblessViewController.swift */; };
+		DE3EF6D52BACD1D700F3A996 /* NiblessBottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3EF6D02BACD1D700F3A996 /* NiblessBottomSheetViewController.swift */; };
+		DE3EF6D62BACD1D700F3A996 /* NiblessNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3EF6D12BACD1D700F3A996 /* NiblessNavigationController.swift */; };
+		DE3EF6D72BACD1D700F3A996 /* NiblessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3EF6D22BACD1D700F3A996 /* NiblessView.swift */; };
+		DE3EF6D82BACD1D700F3A996 /* NiblessTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3EF6D32BACD1D700F3A996 /* NiblessTabBarController.swift */; };
+		DE3EF6DC2BAD213300F3A996 /* LaunchNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3EF6DB2BAD213300F3A996 /* LaunchNavigationController.swift */; };
+		DE3EF6DE2BAD25CA00F3A996 /* LaunchDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3EF6DD2BAD25CA00F3A996 /* LaunchDependencyContainer.swift */; };
+		DE3EF6E02BAD25D400F3A996 /* LaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3EF6DF2BAD25D400F3A996 /* LaunchViewModel.swift */; };
+		DE3EF6E22BAD25DD00F3A996 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3EF6E12BAD25DD00F3A996 /* LaunchView.swift */; };
+		DE3EF6E52BAD305D00F3A996 /* LaunchRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3EF6E42BAD305D00F3A996 /* LaunchRootView.swift */; };
+		DE3EF6E72BAD306C00F3A996 /* LaunchRootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3EF6E62BAD306C00F3A996 /* LaunchRootViewModel.swift */; };
+		DE3EF6EA2BAD33DE00F3A996 /* UINavigationController+PopToViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3EF6E92BAD33DE00F3A996 /* UINavigationController+PopToViewController.swift */; };
+		DE3EF6EC2BAD33F600F3A996 /* UIView+ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3EF6EB2BAD33F600F3A996 /* UIView+ViewController.swift */; };
+		DE3EF6EE2BAD341700F3A996 /* ViewControllerContainment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3EF6ED2BAD341700F3A996 /* ViewControllerContainment.swift */; };
+		DE3EF6F02BAD344B00F3A996 /* WithConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3EF6EF2BAD344B00F3A996 /* WithConfigurable.swift */; };
+		DE3EF6F22BAD346300F3A996 /* NavigationAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3EF6F12BAD346300F3A996 /* NavigationAction.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DE3EF6A22BAC475000F3A996 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE3EF6892BAC474F00F3A996 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE3EF6902BAC474F00F3A996;
+			remoteInfo = DessertDelights;
+		};
+		DE3EF6AC2BAC475000F3A996 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE3EF6892BAC474F00F3A996 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE3EF6902BAC474F00F3A996;
+			remoteInfo = DessertDelights;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DE3EF6912BAC474F00F3A996 /* DessertDelights.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DessertDelights.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE3EF6942BAC474F00F3A996 /* DessertDelightsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertDelightsApp.swift; sourceTree = "<group>"; };
+		DE3EF6962BAC474F00F3A996 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DE3EF6982BAC475000F3A996 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DE3EF69B2BAC475000F3A996 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DE3EF6A12BAC475000F3A996 /* DessertDelightsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DessertDelightsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE3EF6A52BAC475000F3A996 /* DessertDelightsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertDelightsTests.swift; sourceTree = "<group>"; };
+		DE3EF6AB2BAC475000F3A996 /* DessertDelightsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DessertDelightsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE3EF6AF2BAC475000F3A996 /* DessertDelightsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertDelightsUITests.swift; sourceTree = "<group>"; };
+		DE3EF6B12BAC475000F3A996 /* DessertDelightsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertDelightsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DE3EF6C02BAC50DE00F3A996 /* MainDependencyContainer .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainDependencyContainer .swift"; sourceTree = "<group>"; };
+		DE3EF6C22BAC513F00F3A996 /* MainNavigationController .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainNavigationController .swift"; sourceTree = "<group>"; };
+		DE3EF6C42BAC514E00F3A996 /* MainViewModel .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewModel .swift"; sourceTree = "<group>"; };
+		DE3EF6C62BAC515700F3A996 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		DE3EF6CF2BACD1D700F3A996 /* NiblessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NiblessViewController.swift; sourceTree = "<group>"; };
+		DE3EF6D02BACD1D700F3A996 /* NiblessBottomSheetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NiblessBottomSheetViewController.swift; sourceTree = "<group>"; };
+		DE3EF6D12BACD1D700F3A996 /* NiblessNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NiblessNavigationController.swift; sourceTree = "<group>"; };
+		DE3EF6D22BACD1D700F3A996 /* NiblessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NiblessView.swift; sourceTree = "<group>"; };
+		DE3EF6D32BACD1D700F3A996 /* NiblessTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NiblessTabBarController.swift; sourceTree = "<group>"; };
+		DE3EF6DB2BAD213300F3A996 /* LaunchNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchNavigationController.swift; sourceTree = "<group>"; };
+		DE3EF6DD2BAD25CA00F3A996 /* LaunchDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDependencyContainer.swift; sourceTree = "<group>"; };
+		DE3EF6DF2BAD25D400F3A996 /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
+		DE3EF6E12BAD25DD00F3A996 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
+		DE3EF6E42BAD305D00F3A996 /* LaunchRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchRootView.swift; sourceTree = "<group>"; };
+		DE3EF6E62BAD306C00F3A996 /* LaunchRootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchRootViewModel.swift; sourceTree = "<group>"; };
+		DE3EF6E92BAD33DE00F3A996 /* UINavigationController+PopToViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+PopToViewController.swift"; sourceTree = "<group>"; };
+		DE3EF6EB2BAD33F600F3A996 /* UIView+ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ViewController.swift"; sourceTree = "<group>"; };
+		DE3EF6ED2BAD341700F3A996 /* ViewControllerContainment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerContainment.swift; sourceTree = "<group>"; };
+		DE3EF6EF2BAD344B00F3A996 /* WithConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithConfigurable.swift; sourceTree = "<group>"; };
+		DE3EF6F12BAD346300F3A996 /* NavigationAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationAction.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DE3EF68E2BAC474F00F3A996 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE3EF69E2BAC475000F3A996 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE3EF6A82BAC475000F3A996 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DE3EF6882BAC474F00F3A996 = {
+			isa = PBXGroup;
+			children = (
+				DE3EF6932BAC474F00F3A996 /* DessertDelights */,
+				DE3EF6A42BAC475000F3A996 /* DessertDelightsTests */,
+				DE3EF6AE2BAC475000F3A996 /* DessertDelightsUITests */,
+				DE3EF6922BAC474F00F3A996 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DE3EF6922BAC474F00F3A996 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DE3EF6912BAC474F00F3A996 /* DessertDelights.app */,
+				DE3EF6A12BAC475000F3A996 /* DessertDelightsTests.xctest */,
+				DE3EF6AB2BAC475000F3A996 /* DessertDelightsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DE3EF6932BAC474F00F3A996 /* DessertDelights */ = {
+			isa = PBXGroup;
+			children = (
+				DE3EF6942BAC474F00F3A996 /* DessertDelightsApp.swift */,
+				DE3EF6BE2BAC4A3F00F3A996 /* Modules */,
+				DE3EF6CE2BACD1C900F3A996 /* NiblessComponents */,
+				DE3EF6E82BAD339400F3A996 /* Extenstions  */,
+				DE3EF6962BAC474F00F3A996 /* ContentView.swift */,
+				DE3EF6982BAC475000F3A996 /* Assets.xcassets */,
+				DE3EF69A2BAC475000F3A996 /* Preview Content */,
+			);
+			path = DessertDelights;
+			sourceTree = "<group>";
+		};
+		DE3EF69A2BAC475000F3A996 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				DE3EF69B2BAC475000F3A996 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DE3EF6A42BAC475000F3A996 /* DessertDelightsTests */ = {
+			isa = PBXGroup;
+			children = (
+				DE3EF6A52BAC475000F3A996 /* DessertDelightsTests.swift */,
+			);
+			path = DessertDelightsTests;
+			sourceTree = "<group>";
+		};
+		DE3EF6AE2BAC475000F3A996 /* DessertDelightsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DE3EF6AF2BAC475000F3A996 /* DessertDelightsUITests.swift */,
+				DE3EF6B12BAC475000F3A996 /* DessertDelightsUITestsLaunchTests.swift */,
+			);
+			path = DessertDelightsUITests;
+			sourceTree = "<group>";
+		};
+		DE3EF6BE2BAC4A3F00F3A996 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				DE3EF6BF2BAC4A5100F3A996 /* Main */,
+				DE3EF6D92BAD20EF00F3A996 /* Launch */,
+				DE3EF6DA2BAD20FC00F3A996 /* Home */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		DE3EF6BF2BAC4A5100F3A996 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				DE3EF6C22BAC513F00F3A996 /* MainNavigationController .swift */,
+				DE3EF6C02BAC50DE00F3A996 /* MainDependencyContainer .swift */,
+				DE3EF6C42BAC514E00F3A996 /* MainViewModel .swift */,
+				DE3EF6C62BAC515700F3A996 /* MainView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		DE3EF6CE2BACD1C900F3A996 /* NiblessComponents */ = {
+			isa = PBXGroup;
+			children = (
+				DE3EF6D02BACD1D700F3A996 /* NiblessBottomSheetViewController.swift */,
+				DE3EF6D12BACD1D700F3A996 /* NiblessNavigationController.swift */,
+				DE3EF6D32BACD1D700F3A996 /* NiblessTabBarController.swift */,
+				DE3EF6D22BACD1D700F3A996 /* NiblessView.swift */,
+				DE3EF6CF2BACD1D700F3A996 /* NiblessViewController.swift */,
+			);
+			path = NiblessComponents;
+			sourceTree = "<group>";
+		};
+		DE3EF6D92BAD20EF00F3A996 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				DE3EF6DB2BAD213300F3A996 /* LaunchNavigationController.swift */,
+				DE3EF6DD2BAD25CA00F3A996 /* LaunchDependencyContainer.swift */,
+				DE3EF6DF2BAD25D400F3A996 /* LaunchViewModel.swift */,
+				DE3EF6E12BAD25DD00F3A996 /* LaunchView.swift */,
+				DE3EF6E32BAD304C00F3A996 /* root */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		DE3EF6DA2BAD20FC00F3A996 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		DE3EF6E32BAD304C00F3A996 /* root */ = {
+			isa = PBXGroup;
+			children = (
+				DE3EF6E42BAD305D00F3A996 /* LaunchRootView.swift */,
+				DE3EF6E62BAD306C00F3A996 /* LaunchRootViewModel.swift */,
+			);
+			path = root;
+			sourceTree = "<group>";
+		};
+		DE3EF6E82BAD339400F3A996 /* Extenstions  */ = {
+			isa = PBXGroup;
+			children = (
+				DE3EF6E92BAD33DE00F3A996 /* UINavigationController+PopToViewController.swift */,
+				DE3EF6EB2BAD33F600F3A996 /* UIView+ViewController.swift */,
+				DE3EF6ED2BAD341700F3A996 /* ViewControllerContainment.swift */,
+				DE3EF6EF2BAD344B00F3A996 /* WithConfigurable.swift */,
+				DE3EF6F12BAD346300F3A996 /* NavigationAction.swift */,
+			);
+			path = "Extenstions ";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DE3EF6902BAC474F00F3A996 /* DessertDelights */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE3EF6B52BAC475000F3A996 /* Build configuration list for PBXNativeTarget "DessertDelights" */;
+			buildPhases = (
+				DE3EF68D2BAC474F00F3A996 /* Sources */,
+				DE3EF68E2BAC474F00F3A996 /* Frameworks */,
+				DE3EF68F2BAC474F00F3A996 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DessertDelights;
+			productName = DessertDelights;
+			productReference = DE3EF6912BAC474F00F3A996 /* DessertDelights.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DE3EF6A02BAC475000F3A996 /* DessertDelightsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE3EF6B82BAC475000F3A996 /* Build configuration list for PBXNativeTarget "DessertDelightsTests" */;
+			buildPhases = (
+				DE3EF69D2BAC475000F3A996 /* Sources */,
+				DE3EF69E2BAC475000F3A996 /* Frameworks */,
+				DE3EF69F2BAC475000F3A996 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE3EF6A32BAC475000F3A996 /* PBXTargetDependency */,
+			);
+			name = DessertDelightsTests;
+			productName = DessertDelightsTests;
+			productReference = DE3EF6A12BAC475000F3A996 /* DessertDelightsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DE3EF6AA2BAC475000F3A996 /* DessertDelightsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE3EF6BB2BAC475000F3A996 /* Build configuration list for PBXNativeTarget "DessertDelightsUITests" */;
+			buildPhases = (
+				DE3EF6A72BAC475000F3A996 /* Sources */,
+				DE3EF6A82BAC475000F3A996 /* Frameworks */,
+				DE3EF6A92BAC475000F3A996 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE3EF6AD2BAC475000F3A996 /* PBXTargetDependency */,
+			);
+			name = DessertDelightsUITests;
+			productName = DessertDelightsUITests;
+			productReference = DE3EF6AB2BAC475000F3A996 /* DessertDelightsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DE3EF6892BAC474F00F3A996 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					DE3EF6902BAC474F00F3A996 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					DE3EF6A02BAC475000F3A996 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = DE3EF6902BAC474F00F3A996;
+					};
+					DE3EF6AA2BAC475000F3A996 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = DE3EF6902BAC474F00F3A996;
+					};
+				};
+			};
+			buildConfigurationList = DE3EF68C2BAC474F00F3A996 /* Build configuration list for PBXProject "DessertDelights" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DE3EF6882BAC474F00F3A996;
+			productRefGroup = DE3EF6922BAC474F00F3A996 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DE3EF6902BAC474F00F3A996 /* DessertDelights */,
+				DE3EF6A02BAC475000F3A996 /* DessertDelightsTests */,
+				DE3EF6AA2BAC475000F3A996 /* DessertDelightsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DE3EF68F2BAC474F00F3A996 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE3EF69C2BAC475000F3A996 /* Preview Assets.xcassets in Resources */,
+				DE3EF6992BAC475000F3A996 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE3EF69F2BAC475000F3A996 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE3EF6A92BAC475000F3A996 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DE3EF68D2BAC474F00F3A996 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE3EF6C52BAC514E00F3A996 /* MainViewModel .swift in Sources */,
+				DE3EF6E22BAD25DD00F3A996 /* LaunchView.swift in Sources */,
+				DE3EF6DC2BAD213300F3A996 /* LaunchNavigationController.swift in Sources */,
+				DE3EF6EC2BAD33F600F3A996 /* UIView+ViewController.swift in Sources */,
+				DE3EF6C72BAC515700F3A996 /* MainView.swift in Sources */,
+				DE3EF6E72BAD306C00F3A996 /* LaunchRootViewModel.swift in Sources */,
+				DE3EF6972BAC474F00F3A996 /* ContentView.swift in Sources */,
+				DE3EF6F22BAD346300F3A996 /* NavigationAction.swift in Sources */,
+				DE3EF6D62BACD1D700F3A996 /* NiblessNavigationController.swift in Sources */,
+				DE3EF6C12BAC50DE00F3A996 /* MainDependencyContainer .swift in Sources */,
+				DE3EF6D82BACD1D700F3A996 /* NiblessTabBarController.swift in Sources */,
+				DE3EF6952BAC474F00F3A996 /* DessertDelightsApp.swift in Sources */,
+				DE3EF6E52BAD305D00F3A996 /* LaunchRootView.swift in Sources */,
+				DE3EF6C32BAC513F00F3A996 /* MainNavigationController .swift in Sources */,
+				DE3EF6EE2BAD341700F3A996 /* ViewControllerContainment.swift in Sources */,
+				DE3EF6E02BAD25D400F3A996 /* LaunchViewModel.swift in Sources */,
+				DE3EF6F02BAD344B00F3A996 /* WithConfigurable.swift in Sources */,
+				DE3EF6D72BACD1D700F3A996 /* NiblessView.swift in Sources */,
+				DE3EF6D52BACD1D700F3A996 /* NiblessBottomSheetViewController.swift in Sources */,
+				DE3EF6D42BACD1D700F3A996 /* NiblessViewController.swift in Sources */,
+				DE3EF6DE2BAD25CA00F3A996 /* LaunchDependencyContainer.swift in Sources */,
+				DE3EF6EA2BAD33DE00F3A996 /* UINavigationController+PopToViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE3EF69D2BAC475000F3A996 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE3EF6A62BAC475000F3A996 /* DessertDelightsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE3EF6A72BAC475000F3A996 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE3EF6B02BAC475000F3A996 /* DessertDelightsUITests.swift in Sources */,
+				DE3EF6B22BAC475000F3A996 /* DessertDelightsUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DE3EF6A32BAC475000F3A996 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE3EF6902BAC474F00F3A996 /* DessertDelights */;
+			targetProxy = DE3EF6A22BAC475000F3A996 /* PBXContainerItemProxy */;
+		};
+		DE3EF6AD2BAC475000F3A996 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE3EF6902BAC474F00F3A996 /* DessertDelights */;
+			targetProxy = DE3EF6AC2BAC475000F3A996 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		DE3EF6B32BAC475000F3A996 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DE3EF6B42BAC475000F3A996 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DE3EF6B62BAC475000F3A996 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"DessertDelights/Preview Content\"";
+				DEVELOPMENT_TEAM = FHTKKF56J6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mostafa.co.DessertDelights;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DE3EF6B72BAC475000F3A996 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"DessertDelights/Preview Content\"";
+				DEVELOPMENT_TEAM = FHTKKF56J6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mostafa.co.DessertDelights;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DE3EF6B92BAC475000F3A996 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FHTKKF56J6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mostafa.co.DessertDelightsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DessertDelights.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DessertDelights";
+			};
+			name = Debug;
+		};
+		DE3EF6BA2BAC475000F3A996 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FHTKKF56J6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mostafa.co.DessertDelightsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DessertDelights.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DessertDelights";
+			};
+			name = Release;
+		};
+		DE3EF6BC2BAC475000F3A996 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FHTKKF56J6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mostafa.co.DessertDelightsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DessertDelights;
+			};
+			name = Debug;
+		};
+		DE3EF6BD2BAC475000F3A996 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FHTKKF56J6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mostafa.co.DessertDelightsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DessertDelights;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DE3EF68C2BAC474F00F3A996 /* Build configuration list for PBXProject "DessertDelights" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE3EF6B32BAC475000F3A996 /* Debug */,
+				DE3EF6B42BAC475000F3A996 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE3EF6B52BAC475000F3A996 /* Build configuration list for PBXNativeTarget "DessertDelights" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE3EF6B62BAC475000F3A996 /* Debug */,
+				DE3EF6B72BAC475000F3A996 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE3EF6B82BAC475000F3A996 /* Build configuration list for PBXNativeTarget "DessertDelightsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE3EF6B92BAC475000F3A996 /* Debug */,
+				DE3EF6BA2BAC475000F3A996 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE3EF6BB2BAC475000F3A996 /* Build configuration list for PBXNativeTarget "DessertDelightsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE3EF6BC2BAC475000F3A996 /* Debug */,
+				DE3EF6BD2BAC475000F3A996 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DE3EF6892BAC474F00F3A996 /* Project object */;
+}
