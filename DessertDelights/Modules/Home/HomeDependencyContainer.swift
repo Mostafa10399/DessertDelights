@@ -23,4 +23,8 @@ final class HomeDependencyContainer {
         self.sharedMainViewModel = parentDependencyContainer.sharedMainViewModel
         self.sharedHomeViewModel = makeHomeViewModel()
     }
+    
+    func makeHomeNavigationController() -> HomeNavigationController {
+        HomeNavigationController()
+    }
 }
