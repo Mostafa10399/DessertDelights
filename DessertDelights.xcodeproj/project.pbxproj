@@ -34,6 +34,10 @@
 		DE3EF6EE2BAD341700F3A996 /* ViewControllerContainment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3EF6ED2BAD341700F3A996 /* ViewControllerContainment.swift */; };
 		DE3EF6F02BAD344B00F3A996 /* WithConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3EF6EF2BAD344B00F3A996 /* WithConfigurable.swift */; };
 		DE3EF6F22BAD346300F3A996 /* NavigationAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3EF6F12BAD346300F3A996 /* NavigationAction.swift */; };
+		DE3EF6F72BADD68900F3A996 /* HomeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3EF6F62BADD68900F3A996 /* HomeNavigationController.swift */; };
+		DE3EF6F92BADD69700F3A996 /* HomeDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3EF6F82BADD69700F3A996 /* HomeDependencyContainer.swift */; };
+		DE3EF6FB2BADD6A100F3A996 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3EF6FA2BADD6A100F3A996 /* HomeViewModel.swift */; };
+		DE3EF6FD2BADD6B100F3A996 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3EF6FC2BADD6B100F3A996 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +88,10 @@
 		DE3EF6ED2BAD341700F3A996 /* ViewControllerContainment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerContainment.swift; sourceTree = "<group>"; };
 		DE3EF6EF2BAD344B00F3A996 /* WithConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithConfigurable.swift; sourceTree = "<group>"; };
 		DE3EF6F12BAD346300F3A996 /* NavigationAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationAction.swift; sourceTree = "<group>"; };
+		DE3EF6F62BADD68900F3A996 /* HomeNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigationController.swift; sourceTree = "<group>"; };
+		DE3EF6F82BADD69700F3A996 /* HomeDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDependencyContainer.swift; sourceTree = "<group>"; };
+		DE3EF6FA2BADD6A100F3A996 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		DE3EF6FC2BADD6B100F3A996 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +226,10 @@
 		DE3EF6DA2BAD20FC00F3A996 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				DE3EF6F62BADD68900F3A996 /* HomeNavigationController.swift */,
+				DE3EF6F82BADD69700F3A996 /* HomeDependencyContainer.swift */,
+				DE3EF6FA2BADD6A100F3A996 /* HomeViewModel.swift */,
+				DE3EF6FC2BADD6B100F3A996 /* HomeView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -376,6 +388,7 @@
 				DE3EF6C52BAC514E00F3A996 /* MainViewModel .swift in Sources */,
 				DE3EF6E22BAD25DD00F3A996 /* LaunchView.swift in Sources */,
 				DE3EF6DC2BAD213300F3A996 /* LaunchNavigationController.swift in Sources */,
+				DE3EF6FB2BADD6A100F3A996 /* HomeViewModel.swift in Sources */,
 				DE3EF6EC2BAD33F600F3A996 /* UIView+ViewController.swift in Sources */,
 				DE3EF6C72BAC515700F3A996 /* MainView.swift in Sources */,
 				DE3EF6E72BAD306C00F3A996 /* LaunchRootViewModel.swift in Sources */,
@@ -385,12 +398,15 @@
 				DE3EF6C12BAC50DE00F3A996 /* MainDependencyContainer .swift in Sources */,
 				DE3EF6D82BACD1D700F3A996 /* NiblessTabBarController.swift in Sources */,
 				DE3EF6952BAC474F00F3A996 /* DessertDelightsApp.swift in Sources */,
+				DE3EF6F72BADD68900F3A996 /* HomeNavigationController.swift in Sources */,
 				DE3EF6E52BAD305D00F3A996 /* LaunchRootView.swift in Sources */,
+				DE3EF6FD2BADD6B100F3A996 /* HomeView.swift in Sources */,
 				DE3EF6C32BAC513F00F3A996 /* MainNavigationController .swift in Sources */,
 				DE3EF6EE2BAD341700F3A996 /* ViewControllerContainment.swift in Sources */,
 				DE3EF6E02BAD25D400F3A996 /* LaunchViewModel.swift in Sources */,
 				DE3EF6F02BAD344B00F3A996 /* WithConfigurable.swift in Sources */,
 				DE3EF6D72BACD1D700F3A996 /* NiblessView.swift in Sources */,
+				DE3EF6F92BADD69700F3A996 /* HomeDependencyContainer.swift in Sources */,
 				DE3EF6D52BACD1D700F3A996 /* NiblessBottomSheetViewController.swift in Sources */,
 				DE3EF6D42BACD1D700F3A996 /* NiblessViewController.swift in Sources */,
 				DE3EF6DE2BAD25CA00F3A996 /* LaunchDependencyContainer.swift in Sources */,
@@ -558,7 +574,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DessertDelights/Preview Content\"";
-				DEVELOPMENT_TEAM = FHTKKF56J6;
+				DEVELOPMENT_TEAM = 6Q2HZQBJG7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -572,7 +588,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = mostafa.co.DessertDelights;
+				PRODUCT_BUNDLE_IDENTIFIER = mostafa.mahmoud.co.DessertDelights;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -588,7 +604,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DessertDelights/Preview Content\"";
-				DEVELOPMENT_TEAM = FHTKKF56J6;
+				DEVELOPMENT_TEAM = 6Q2HZQBJG7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -602,7 +618,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = mostafa.co.DessertDelights;
+				PRODUCT_BUNDLE_IDENTIFIER = mostafa.mahmoud.co.DessertDelights;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

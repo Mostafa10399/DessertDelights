@@ -11,5 +11,22 @@ final class LaunchDependencyContainer {
     
     // MARK: - Properties
     
+    let sharedMainViewModel: MainViewModel
+    let sharedLaunchViewModel: LaunchViewModel
+    
     // MARK: - Methods
+    
+    init(parentDependencyContainer: MainDependencyContainer) {
+        func makeLaunchViewModel() -> LaunchViewModel {
+            LaunchViewModel()
+        }
+        self.sharedMainViewModel = parentDependencyContainer.sharedMainViewModel
+        self.sharedLaunchViewModel =  makeLaunchViewModel()
+    }
+    
+    func makeLaunchNavigationController() -> LaunchNavigationController {
+        return LaunchNavigationController(
+            viewModel: sharedLaunchViewModel,
+            lunchRootView: LaunchRootView())
+    }
 }

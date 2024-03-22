@@ -15,4 +15,22 @@ final class MainDependencyContainer {
     
     // MARK: - Methods
     
+    init() {
+        func makeMainViewModel() -> MainViewModel {
+            MainViewModel()
+        }
+        self.sharedMainViewModel = makeMainViewModel()
+    }
+    
+    func makeMainNavigationController() -> MainNavigationController {
+        MainNavigationController(
+            viewModel: sharedMainViewModel,
+            launchViewController: <#T##LaunchNavigationController?#>,
+            homeNavigationController: <#T##HomeNavigationController#>)
+    }
+    
+    private func makeLaunchNavigationController() -> LaunchNavigationController {
+        let dependency = LaunchDependencyContainer()
+    }
+    
 }
