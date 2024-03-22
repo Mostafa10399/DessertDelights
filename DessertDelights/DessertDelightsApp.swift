@@ -29,3 +29,16 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     }
     
 }
+
+extension AppDelegate{
+    func setupRootController(controller: UIViewController, navigationBarHidden: Bool) {
+            if let window = self.window {
+                window.rootViewController = controller
+                window.makeKeyAndVisible()
+            }
+        if #available(iOS 13.0, *) {
+            window?.overrideUserInterfaceStyle = .light
+        }
+            UINavigationBar.appearance().isHidden = navigationBarHidden
+        }
+}

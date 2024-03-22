@@ -19,10 +19,7 @@
 		DE3EF6C52BAC514E00F3A996 /* MainViewModel .swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3EF6C42BAC514E00F3A996 /* MainViewModel .swift */; };
 		DE3EF6C72BAC515700F3A996 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3EF6C62BAC515700F3A996 /* MainView.swift */; };
 		DE3EF6D42BACD1D700F3A996 /* NiblessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3EF6CF2BACD1D700F3A996 /* NiblessViewController.swift */; };
-		DE3EF6D52BACD1D700F3A996 /* NiblessBottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3EF6D02BACD1D700F3A996 /* NiblessBottomSheetViewController.swift */; };
 		DE3EF6D62BACD1D700F3A996 /* NiblessNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3EF6D12BACD1D700F3A996 /* NiblessNavigationController.swift */; };
-		DE3EF6D72BACD1D700F3A996 /* NiblessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3EF6D22BACD1D700F3A996 /* NiblessView.swift */; };
-		DE3EF6D82BACD1D700F3A996 /* NiblessTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3EF6D32BACD1D700F3A996 /* NiblessTabBarController.swift */; };
 		DE3EF6DC2BAD213300F3A996 /* LaunchNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3EF6DB2BAD213300F3A996 /* LaunchNavigationController.swift */; };
 		DE3EF6DE2BAD25CA00F3A996 /* LaunchDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3EF6DD2BAD25CA00F3A996 /* LaunchDependencyContainer.swift */; };
 		DE3EF6E02BAD25D400F3A996 /* LaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3EF6DF2BAD25D400F3A996 /* LaunchViewModel.swift */; };
@@ -73,10 +70,7 @@
 		DE3EF6C42BAC514E00F3A996 /* MainViewModel .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewModel .swift"; sourceTree = "<group>"; };
 		DE3EF6C62BAC515700F3A996 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		DE3EF6CF2BACD1D700F3A996 /* NiblessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NiblessViewController.swift; sourceTree = "<group>"; };
-		DE3EF6D02BACD1D700F3A996 /* NiblessBottomSheetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NiblessBottomSheetViewController.swift; sourceTree = "<group>"; };
 		DE3EF6D12BACD1D700F3A996 /* NiblessNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NiblessNavigationController.swift; sourceTree = "<group>"; };
-		DE3EF6D22BACD1D700F3A996 /* NiblessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NiblessView.swift; sourceTree = "<group>"; };
-		DE3EF6D32BACD1D700F3A996 /* NiblessTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NiblessTabBarController.swift; sourceTree = "<group>"; };
 		DE3EF6DB2BAD213300F3A996 /* LaunchNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchNavigationController.swift; sourceTree = "<group>"; };
 		DE3EF6DD2BAD25CA00F3A996 /* LaunchDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDependencyContainer.swift; sourceTree = "<group>"; };
 		DE3EF6DF2BAD25D400F3A996 /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
@@ -202,10 +196,7 @@
 		DE3EF6CE2BACD1C900F3A996 /* NiblessComponents */ = {
 			isa = PBXGroup;
 			children = (
-				DE3EF6D02BACD1D700F3A996 /* NiblessBottomSheetViewController.swift */,
 				DE3EF6D12BACD1D700F3A996 /* NiblessNavigationController.swift */,
-				DE3EF6D32BACD1D700F3A996 /* NiblessTabBarController.swift */,
-				DE3EF6D22BACD1D700F3A996 /* NiblessView.swift */,
 				DE3EF6CF2BACD1D700F3A996 /* NiblessViewController.swift */,
 			);
 			path = NiblessComponents;
@@ -344,7 +335,6 @@
 			);
 			mainGroup = DE3EF6882BAC474F00F3A996;
 			packageReferences = (
-				DE3EF6FE2BAE07D700F3A996 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = DE3EF6922BAC474F00F3A996 /* Products */;
 			projectDirPath = "";
@@ -399,7 +389,6 @@
 				DE3EF6F22BAD346300F3A996 /* NavigationAction.swift in Sources */,
 				DE3EF6D62BACD1D700F3A996 /* NiblessNavigationController.swift in Sources */,
 				DE3EF6C12BAC50DE00F3A996 /* MainDependencyContainer .swift in Sources */,
-				DE3EF6D82BACD1D700F3A996 /* NiblessTabBarController.swift in Sources */,
 				DE3EF6952BAC474F00F3A996 /* DessertDelightsApp.swift in Sources */,
 				DE3EF6F72BADD68900F3A996 /* HomeNavigationController.swift in Sources */,
 				DE3EF6E52BAD305D00F3A996 /* LaunchRootView.swift in Sources */,
@@ -408,9 +397,7 @@
 				DE3EF6EE2BAD341700F3A996 /* ViewControllerContainment.swift in Sources */,
 				DE3EF6E02BAD25D400F3A996 /* LaunchViewModel.swift in Sources */,
 				DE3EF6F02BAD344B00F3A996 /* WithConfigurable.swift in Sources */,
-				DE3EF6D72BACD1D700F3A996 /* NiblessView.swift in Sources */,
 				DE3EF6F92BADD69700F3A996 /* HomeDependencyContainer.swift in Sources */,
-				DE3EF6D52BACD1D700F3A996 /* NiblessBottomSheetViewController.swift in Sources */,
 				DE3EF6D42BACD1D700F3A996 /* NiblessViewController.swift in Sources */,
 				DE3EF6DE2BAD25CA00F3A996 /* LaunchDependencyContainer.swift in Sources */,
 				DE3EF6EA2BAD33DE00F3A996 /* UINavigationController+PopToViewController.swift in Sources */,
@@ -745,17 +732,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		DE3EF6FE2BAE07D700F3A996 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SnapKit/SnapKit";
-			requirement = {
-				kind = exactVersion;
-				version = 5.7.1;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = DE3EF6892BAC474F00F3A996 /* Project object */;
 }
