@@ -42,11 +42,11 @@ final class HomeNavigationController: NiblessNavigationController {
         appearance.configureWithOpaqueBackground()
         appearance.titleTextAttributes = [
             .foregroundColor: UIColor.black,
-            .font: UIFont(name: "Poppins-SemiBold", size: 14)
+            .font: UIFont(name: "Poppins-SemiBold", size: 14) ?? .systemFont(ofSize: 14)
         ]
         appearance.largeTitleTextAttributes = [
             .foregroundColor: UIColor.black,
-            .font: UIFont(name: "Poppins-SemiBold", size: 24) 
+            .font: UIFont(name: "Poppins-SemiBold", size: 24) ?? .systemFont(ofSize: 14)
         ]
         appearance.shadowImage = UIImage()
         appearance.shadowColor = .clear

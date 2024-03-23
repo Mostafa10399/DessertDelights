@@ -23,8 +23,6 @@ final class MainDependencyContainer {
     }
     
     func makeMainNavigationController() -> MainNavigationController {
-        let launchNavigationController = makeLaunchNavigationController()
-        let homeNavigationController = makeHomeNavigationController()
         let launchNavigationControllerFactory = {
             self.makeLaunchNavigationController()
         }

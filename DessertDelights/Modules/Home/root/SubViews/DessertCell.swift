@@ -37,8 +37,13 @@ struct DessertCell: View {
             }
 
         }
-        .clipShape(RoundedRectangle(cornerRadius: 13))
-        .shadow(radius: 2)
+        .clipShape(RoundedRectangle(cornerRadius: 14))
+        .background{
+            RoundedRectangle(cornerRadius: 14)
+                .fill(Color.white)
+                .shadow(
+                    color: .black.opacity(0.1), radius: 2, x: 0, y: 3)
+        }
     }
 }
 
