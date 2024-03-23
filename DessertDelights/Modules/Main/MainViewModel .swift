@@ -7,8 +7,8 @@
 
 import Foundation
 
-final class MainViewModel {
-    
+final class MainViewModel: GoToHomeNavigationController {
+
     // MARK: - Properties
     
     @Published private(set) var view: MainView
@@ -17,6 +17,10 @@ final class MainViewModel {
     
     init() {
         self.view = .launch
+    }
+    
+    func navigateToHomeNavigationController() {
+        view = .home
     }
 }
 

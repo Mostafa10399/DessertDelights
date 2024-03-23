@@ -25,8 +25,18 @@ final class LaunchDependencyContainer {
     }
     
     func makeLaunchNavigationController() -> LaunchNavigationController {
+        let launchRootViewModel = makeLaunchRootViewModel()
+        let lunchRootView = makeLaunchRootView(viewModel: launchRootViewModel)
         return LaunchNavigationController(
             viewModel: sharedLaunchViewModel,
-            lunchRootView: LaunchRootView())
+            lunchRootView: lunchRootView)
+    }
+    
+    private func makeLaunchRootView(viewModel: LaunchRootViewModel) -> LaunchRootView {
+        LaunchRootView(viewModel: viewModel)
+    }
+    
+    private func makeLaunchRootViewModel() -> LaunchRootViewModel {
+        LaunchRootViewModel(goToHomeNavigationView: sharedMainViewModel)
     }
 }

@@ -12,12 +12,13 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     
     // MARK: - Properties
     
-    var window: UIWindow? = UIWindow(frame: UIScreen.main.bounds)
+    var window: UIWindow?
     let mainDependencyContainer = MainDependencyContainer()
     
     // MARK: - Methods
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        self.window = UIWindow(frame: UIScreen.main.bounds)
         setupRootController(
             controller: mainDependencyContainer.makeMainNavigationController(),
             navigationBarHidden: true)

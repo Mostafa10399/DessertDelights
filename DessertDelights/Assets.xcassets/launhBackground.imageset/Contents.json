@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "dess.svg",
+      "filename" : "61J1dcjmI3L.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "61J1dcjmI3L@2x.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "61J1dcjmI3L@3x.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }
