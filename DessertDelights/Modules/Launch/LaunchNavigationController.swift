@@ -55,7 +55,7 @@ final class LaunchNavigationController: NiblessViewController {
     }
     
     private func presetLaunchRootView() {
-        let vc = UIHostingController(rootView: self.lunchRootView)
+        let vc = UIHostingController(rootView: self.lunchRootView).with { $0.modalPresentationStyle = .overFullScreen }
         self.addFullScreen(childViewController: vc, animation: false)
     }
     

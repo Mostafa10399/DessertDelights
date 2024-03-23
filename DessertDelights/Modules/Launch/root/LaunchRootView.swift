@@ -8,11 +8,15 @@
 import SwiftUI
 
 struct LaunchRootView: View {
+    
+    let viewModel: LaunchRootViewModel
+    
     var body: some View {
-        Image(.dess)
+        Image(.launhBackground)
+            .resizable()
+            .ignoresSafeArea()
+            .onAppear{
+                viewModel.viewDidAppear()
+            }
     }
-}
-
-#Preview {
-    LaunchRootView()
 }
