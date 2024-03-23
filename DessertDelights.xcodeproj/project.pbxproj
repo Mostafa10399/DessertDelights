@@ -11,6 +11,10 @@
 		DE1AD8F92BAF7B2F00C85A54 /* DessertDelightsFilterApis.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1AD8F82BAF7B2F00C85A54 /* DessertDelightsFilterApis.swift */; };
 		DE1AD8FC2BAF7BFB00C85A54 /* FilterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1AD8FB2BAF7BFB00C85A54 /* FilterRepository.swift */; };
 		DE1AD8FE2BAF7C5800C85A54 /* MainFilterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1AD8FD2BAF7C5800C85A54 /* MainFilterRepository.swift */; };
+		DE1AD9002BAF802500C85A54 /* GetAllDessertsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1AD8FF2BAF802500C85A54 /* GetAllDessertsUseCase.swift */; };
+		DE1AD9022BAF80CE00C85A54 /* DessertPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1AD9012BAF80CE00C85A54 /* DessertPresentable.swift */; };
+		DE1AD9052BAF86BE00C85A54 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1AD9042BAF86BE00C85A54 /* LoaderView.swift */; };
+		DE1AD9072BAF877100C85A54 /* View+IfModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1AD9062BAF877100C85A54 /* View+IfModifier.swift */; };
 		DE3EF6952BAC474F00F3A996 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3EF6942BAC474F00F3A996 /* AppDelegate.swift */; };
 		DE3EF6992BAC475000F3A996 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE3EF6982BAC475000F3A996 /* Assets.xcassets */; };
 		DE3EF69C2BAC475000F3A996 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE3EF69B2BAC475000F3A996 /* Preview Assets.xcassets */; };
@@ -98,6 +102,10 @@
 		DE1AD8F82BAF7B2F00C85A54 /* DessertDelightsFilterApis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertDelightsFilterApis.swift; sourceTree = "<group>"; };
 		DE1AD8FB2BAF7BFB00C85A54 /* FilterRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterRepository.swift; sourceTree = "<group>"; };
 		DE1AD8FD2BAF7C5800C85A54 /* MainFilterRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFilterRepository.swift; sourceTree = "<group>"; };
+		DE1AD8FF2BAF802500C85A54 /* GetAllDessertsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllDessertsUseCase.swift; sourceTree = "<group>"; };
+		DE1AD9012BAF80CE00C85A54 /* DessertPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertPresentable.swift; sourceTree = "<group>"; };
+		DE1AD9042BAF86BE00C85A54 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
+		DE1AD9062BAF877100C85A54 /* View+IfModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+IfModifier.swift"; sourceTree = "<group>"; };
 		DE3EF6912BAC474F00F3A996 /* DessertDelights.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DessertDelights.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE3EF6942BAC474F00F3A996 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE3EF6982BAC475000F3A996 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -195,6 +203,14 @@
 			path = FilterRepository;
 			sourceTree = "<group>";
 		};
+		DE1AD9032BAF86A400C85A54 /* Reusable */ = {
+			isa = PBXGroup;
+			children = (
+				DE1AD9042BAF86BE00C85A54 /* LoaderView.swift */,
+			);
+			path = Reusable;
+			sourceTree = "<group>";
+		};
 		DE3EF6882BAC474F00F3A996 = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +242,7 @@
 				DE3EF6BE2BAC4A3F00F3A996 /* Modules */,
 				DE3EF6CE2BACD1C900F3A996 /* NiblessComponents */,
 				DE3EF6E82BAD339400F3A996 /* Extenstions  */,
+				DE1AD9032BAF86A400C85A54 /* Reusable */,
 				DE566A3F2BAF61D200DABE30 /* CoreKit */,
 				DE3EF6982BAC475000F3A996 /* Assets.xcassets */,
 				DE3EF69A2BAC475000F3A996 /* Preview Content */,
@@ -331,6 +348,7 @@
 				DE3EF6EF2BAD344B00F3A996 /* WithConfigurable.swift */,
 				DE3EF6F12BAD346300F3A996 /* NavigationAction.swift */,
 				DE566A572BAF66C900DABE30 /* ErrorMessage.swift */,
+				DE1AD9062BAF877100C85A54 /* View+IfModifier.swift */,
 			);
 			path = "Extenstions ";
 			sourceTree = "<group>";
@@ -352,6 +370,7 @@
 		DE566A402BAF621300DABE30 /* Usecase */ = {
 			isa = PBXGroup;
 			children = (
+				DE1AD8FF2BAF802500C85A54 /* GetAllDessertsUseCase.swift */,
 			);
 			path = Usecase;
 			sourceTree = "<group>";
@@ -359,6 +378,7 @@
 		DE566A412BAF622600DABE30 /* Presentable */ = {
 			isa = PBXGroup;
 			children = (
+				DE1AD9012BAF80CE00C85A54 /* DessertPresentable.swift */,
 			);
 			path = Presentable;
 			sourceTree = "<group>";
@@ -609,6 +629,7 @@
 				DE3EF6E22BAD25DD00F3A996 /* LaunchView.swift in Sources */,
 				DE6B09FF2BAE90F40044D020 /* DessertCell.swift in Sources */,
 				DE3EF6DC2BAD213300F3A996 /* LaunchNavigationController.swift in Sources */,
+				DE1AD9022BAF80CE00C85A54 /* DessertPresentable.swift in Sources */,
 				DE3EF6FB2BADD6A100F3A996 /* HomeViewModel.swift in Sources */,
 				DE3EF6EC2BAD33F600F3A996 /* UIView+ViewController.swift in Sources */,
 				DE6B09EB2BAE76370044D020 /* HomeRootView.swift in Sources */,
@@ -621,11 +642,14 @@
 				DE566A4C2BAF653100DABE30 /* DessertDelightsService.swift in Sources */,
 				DE566A462BAF63AA00DABE30 /* Meal.swift in Sources */,
 				DE1AD8F42BAF7A9A00C85A54 /* FilterApis.swift in Sources */,
+				DE1AD9052BAF86BE00C85A54 /* LoaderView.swift in Sources */,
 				DE3EF6952BAC474F00F3A996 /* AppDelegate.swift in Sources */,
 				DE566A482BAF643600DABE30 /* Meals.swift in Sources */,
 				DE566A4E2BAF655D00DABE30 /* RemoteService.swift in Sources */,
 				DE3EF6F72BADD68900F3A996 /* HomeNavigationController.swift in Sources */,
 				DE566A582BAF66C900DABE30 /* ErrorMessage.swift in Sources */,
+				DE1AD9072BAF877100C85A54 /* View+IfModifier.swift in Sources */,
+				DE1AD9002BAF802500C85A54 /* GetAllDessertsUseCase.swift in Sources */,
 				DE3EF6E52BAD305D00F3A996 /* LaunchRootView.swift in Sources */,
 				DE566A562BAF668100DABE30 /* RemoteAPI.swift in Sources */,
 				DE3EF6FD2BADD6B100F3A996 /* HomeView.swift in Sources */,

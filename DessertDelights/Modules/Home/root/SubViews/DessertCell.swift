@@ -12,11 +12,12 @@ struct DessertCell: View {
     // MARK: - Properties
     
     let width: CGFloat
+    let dessert: DessertPresentable
     
     // MARK: - CodeView
     
     var body: some View {
-        AsyncImage(url: URL(string: "https://www.themealdb.com/images/media/meals/adxcbq1619787919.jpg")) { image in
+        AsyncImage(url: dessert.dessertImage) { image in
             image
                 .resizable()
         } placeholder: {
@@ -27,7 +28,7 @@ struct DessertCell: View {
         .overlay {
             VStack(alignment: .leading) {
                 Spacer()
-                Text("Apam balik")
+                Text(dessert.dessertName)
                     .foregroundStyle(.white)
                     .font(.custom("Poppins-SemiBold", size: 16))
                     .padding([.bottom, .leading], 12)
@@ -48,5 +49,5 @@ struct DessertCell: View {
 }
 
 #Preview {
-    DessertCell(width: 200)
+    DessertCell(width: 200, dessert: DessertPresentable(meal: Meal(id: "123", mealName: "apple pie", mealImage: "https://www.themealdb.com/images/media/meals/6ut2og1619790195.jpg")))
 }
