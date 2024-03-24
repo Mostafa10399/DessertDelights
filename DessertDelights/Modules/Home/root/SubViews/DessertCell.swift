@@ -17,24 +17,32 @@ struct DessertCell: View {
     // MARK: - CodeView
     
     var body: some View {
-        AsyncImage(url: dessert.dessertImage) { image in
-            image
-                .resizable()
-        } placeholder: {
-            ProgressView()
-                
-        }
+        AsyncImage(url: dessert.dessertImage, transaction: .init(animation: .bouncy(duration: 1)), content: { p in
+            switch p {
+            case .empty:
+                 ZStack {
+                     Color.gray.opacity(0.4)
+                     ProgressView()
+                 }
+            case .success(let image):
+                                image.resizable()
+            case .failure(let error):
+                                Text(error.localizedDescription)
+            @unknown default:
+                EmptyView()
+            }
+        })
         .frame(width: width, height: 200)
         .overlay {
             VStack(alignment: .leading) {
                 Spacer()
                 Text(dessert.dessertName)
                     .foregroundStyle(.white)
-                    .font(.custom("Poppins-SemiBold", size: 16))
+                    .font(.custom("Poppins-Bold", size: 16))
                     .padding([.bottom, .leading], 12)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .multilineTextAlignment(.leading)
-                    .shadow(radius: 10)
+                
             }
 
         }

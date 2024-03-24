@@ -15,6 +15,7 @@
 		DE1AD9022BAF80CE00C85A54 /* DessertPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1AD9012BAF80CE00C85A54 /* DessertPresentable.swift */; };
 		DE1AD9052BAF86BE00C85A54 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1AD9042BAF86BE00C85A54 /* LoaderView.swift */; };
 		DE1AD9072BAF877100C85A54 /* View+IfModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1AD9062BAF877100C85A54 /* View+IfModifier.swift */; };
+		DE1AD9092BB0AD7100C85A54 /* HomeRootViewModel_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1AD9082BB0AD7100C85A54 /* HomeRootViewModel_Tests.swift */; };
 		DE3EF6952BAC474F00F3A996 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3EF6942BAC474F00F3A996 /* AppDelegate.swift */; };
 		DE3EF6992BAC475000F3A996 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE3EF6982BAC475000F3A996 /* Assets.xcassets */; };
 		DE3EF69C2BAC475000F3A996 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE3EF69B2BAC475000F3A996 /* Preview Assets.xcassets */; };
@@ -106,6 +107,7 @@
 		DE1AD9012BAF80CE00C85A54 /* DessertPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertPresentable.swift; sourceTree = "<group>"; };
 		DE1AD9042BAF86BE00C85A54 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 		DE1AD9062BAF877100C85A54 /* View+IfModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+IfModifier.swift"; sourceTree = "<group>"; };
+		DE1AD9082BB0AD7100C85A54 /* HomeRootViewModel_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRootViewModel_Tests.swift; sourceTree = "<group>"; };
 		DE3EF6912BAC474F00F3A996 /* DessertDelights.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DessertDelights.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE3EF6942BAC474F00F3A996 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE3EF6982BAC475000F3A996 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -262,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				DE3EF6A52BAC475000F3A996 /* DessertDelightsTests.swift */,
+				DE1AD9082BB0AD7100C85A54 /* HomeRootViewModel_Tests.swift */,
 			);
 			path = DessertDelightsTests;
 			sourceTree = "<group>";
@@ -676,6 +679,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE3EF6A62BAC475000F3A996 /* DessertDelightsTests.swift in Sources */,
+				DE1AD9092BB0AD7100C85A54 /* HomeRootViewModel_Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

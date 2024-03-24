@@ -18,7 +18,7 @@ struct HomeRootView: View {
     
     var body: some View {
         GeometryReader { geo in
-        ScrollView {
+            ScrollView(showsIndicators: false) {
             viewModel.desserts.map { desserts in
                 LazyVGrid(columns: [GridItem(), GridItem()], alignment: .center, spacing: 12, content: {
                     ForEach(desserts, id: \.id) { item in
