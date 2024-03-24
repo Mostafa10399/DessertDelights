@@ -25,6 +25,31 @@ final class HomeDependencyContainer {
     }
     
     func makeHomeNavigationController() -> HomeNavigationController {
-        HomeNavigationController()
+        let homeRootViewModel = makeHomeRootViewModel()
+        let homeRootView = makeHomeRootView(viewModel: homeRootViewModel)
+        let dessertDetailsViewFactory = { (id: Int) in
+            self.makeDessertDetailsView()
+        }
+        return HomeNavigationController(
+            viewModel: sharedHomeViewModel,
+            homeRootView: homeRootView,
+            dessertDetailsViewFactory: dessertDetailsViewFactory)
+    }
+    
+    private func makeHomeRootView(viewModel: HomeRootViewModel) -> HomeRootView {
+        HomeRootView(viewModel: viewModel)
+    }
+    
+    private func makeHomeRootViewModel() -> HomeRootViewModel {
+        let filterRepository = makeFilterRepository()
+        return HomeRootViewModel(filterRepository: filterRepository)
+    }
+    
+    private func makeFilterRepository() -> FilterRepository {
+        MainFilterRepository(remoteApi: DessertDelightsFilterApis())
+    }
+    
+    private func makeDessertDetailsView() -> DessertDetailsView {
+        DessertDetailsView()
     }
 }
