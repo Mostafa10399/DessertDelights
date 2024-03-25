@@ -70,10 +70,11 @@
 		DEBC63552BB17ABB0072CE0D /* DessertDetailsPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBC63542BB17ABB0072CE0D /* DessertDetailsPresentable.swift */; };
 		DEBC63572BB1B05A0072CE0D /* ScreenStateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBC63562BB1B05A0072CE0D /* ScreenStateProtocol.swift */; };
 		DEBC63592BB1F63E0072CE0D /* DessertsList.json in Resources */ = {isa = PBXBuildFile; fileRef = DEBC63582BB1F63E0072CE0D /* DessertsList.json */; };
-		DEBC635B2BB1F6830072CE0D /* DessertDelightsDessertApis_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBC635A2BB1F6830072CE0D /* DessertDelightsDessertApis_Tests.swift */; };
 		DEBC635D2BB1F70E0072CE0D /* Bundle+UnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBC635C2BB1F70E0072CE0D /* Bundle+UnitTest.swift */; };
 		DEBC635F2BB205850072CE0D /* MainDessertRepositorySpy_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBC635E2BB205850072CE0D /* MainDessertRepositorySpy_Tests.swift */; };
 		DEBC63612BB20B080072CE0D /* DessertDelightsDessertApiSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBC63602BB20B080072CE0D /* DessertDelightsDessertApiSpy.swift */; };
+		DEBC63652BB233870072CE0D /* AsyncTest+UnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBC63642BB233870072CE0D /* AsyncTest+UnitTest.swift */; };
+		DEBC63682BB2391C0072CE0D /* DessertDetails.json in Resources */ = {isa = PBXBuildFile; fileRef = DEBC63672BB2391C0072CE0D /* DessertDetails.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -172,10 +173,11 @@
 		DEBC63542BB17ABB0072CE0D /* DessertDetailsPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertDetailsPresentable.swift; sourceTree = "<group>"; };
 		DEBC63562BB1B05A0072CE0D /* ScreenStateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenStateProtocol.swift; sourceTree = "<group>"; };
 		DEBC63582BB1F63E0072CE0D /* DessertsList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DessertsList.json; sourceTree = "<group>"; };
-		DEBC635A2BB1F6830072CE0D /* DessertDelightsDessertApis_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertDelightsDessertApis_Tests.swift; sourceTree = "<group>"; };
 		DEBC635C2BB1F70E0072CE0D /* Bundle+UnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+UnitTest.swift"; sourceTree = "<group>"; };
 		DEBC635E2BB205850072CE0D /* MainDessertRepositorySpy_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDessertRepositorySpy_Tests.swift; sourceTree = "<group>"; };
 		DEBC63602BB20B080072CE0D /* DessertDelightsDessertApiSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertDelightsDessertApiSpy.swift; sourceTree = "<group>"; };
+		DEBC63642BB233870072CE0D /* AsyncTest+UnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AsyncTest+UnitTest.swift"; sourceTree = "<group>"; };
+		DEBC63672BB2391C0072CE0D /* DessertDetails.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DessertDetails.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,12 +284,10 @@
 			isa = PBXGroup;
 			children = (
 				DE3EF6A52BAC475000F3A996 /* DessertDelightsTests.swift */,
+				DEBC63622BB232CD0072CE0D /* SpyDessertApis */,
+				DEBC63662BB235560072CE0D /* SpyDessertsReoistory */,
+				DEBC63632BB233510072CE0D /* Extensions */,
 				DE1AD9082BB0AD7100C85A54 /* HomeRootViewModel_Tests.swift */,
-				DEBC635A2BB1F6830072CE0D /* DessertDelightsDessertApis_Tests.swift */,
-				DEBC635E2BB205850072CE0D /* MainDessertRepositorySpy_Tests.swift */,
-				DEBC63582BB1F63E0072CE0D /* DessertsList.json */,
-				DEBC635C2BB1F70E0072CE0D /* Bundle+UnitTest.swift */,
-				DEBC63602BB20B080072CE0D /* DessertDelightsDessertApiSpy.swift */,
 			);
 			path = DessertDelightsTests;
 			sourceTree = "<group>";
@@ -511,6 +511,33 @@
 			path = SubViews;
 			sourceTree = "<group>";
 		};
+		DEBC63622BB232CD0072CE0D /* SpyDessertApis */ = {
+			isa = PBXGroup;
+			children = (
+				DEBC63582BB1F63E0072CE0D /* DessertsList.json */,
+				DEBC63672BB2391C0072CE0D /* DessertDetails.json */,
+				DEBC63602BB20B080072CE0D /* DessertDelightsDessertApiSpy.swift */,
+			);
+			path = SpyDessertApis;
+			sourceTree = "<group>";
+		};
+		DEBC63632BB233510072CE0D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DEBC635C2BB1F70E0072CE0D /* Bundle+UnitTest.swift */,
+				DEBC63642BB233870072CE0D /* AsyncTest+UnitTest.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DEBC63662BB235560072CE0D /* SpyDessertsReoistory */ = {
+			isa = PBXGroup;
+			children = (
+				DEBC635E2BB205850072CE0D /* MainDessertRepositorySpy_Tests.swift */,
+			);
+			path = SpyDessertsReoistory;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -639,6 +666,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEBC63592BB1F63E0072CE0D /* DessertsList.json in Resources */,
+				DEBC63682BB2391C0072CE0D /* DessertDetails.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -713,8 +741,8 @@
 				DE3EF6A62BAC475000F3A996 /* DessertDelightsTests.swift in Sources */,
 				DEBC635D2BB1F70E0072CE0D /* Bundle+UnitTest.swift in Sources */,
 				DE1AD9092BB0AD7100C85A54 /* HomeRootViewModel_Tests.swift in Sources */,
+				DEBC63652BB233870072CE0D /* AsyncTest+UnitTest.swift in Sources */,
 				DEBC63612BB20B080072CE0D /* DessertDelightsDessertApiSpy.swift in Sources */,
-				DEBC635B2BB1F6830072CE0D /* DessertDelightsDessertApis_Tests.swift in Sources */,
 				DEBC635F2BB205850072CE0D /* MainDessertRepositorySpy_Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

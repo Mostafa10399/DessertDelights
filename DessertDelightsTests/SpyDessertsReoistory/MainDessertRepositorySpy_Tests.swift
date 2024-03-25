@@ -22,7 +22,7 @@ final class MainDessertRepositorySpy_Tests: XCTestCase {
         MainDessertRepositorySpy(spy: DessertDelightsDessertApiSpy())
     }
     
-    func test_MainDessertRepositorySpy_getAllDesserts_shouldReturnDessertCount() throws {
+    func test_MainDessertRepositorySpy_getAllDesserts_shouldCheckDessertCount() throws {
         runAsyncTest { [weak self] in
             // Arrange
             guard let strongSelf = self else { return }
@@ -32,8 +32,18 @@ final class MainDessertRepositorySpy_Tests: XCTestCase {
             // Assert
             XCTAssertEqual(desserts.count, 65)
         }
-
-        
+    }
+    
+    func test_MainDessertRepositorySpy_getDessertDetails_shouldCheckDessertCount() throws {
+        runAsyncTest { [weak self] in
+            // Arrange
+            guard let strongSelf = self else { return }
+            let sut = strongSelf.makeSut()
+            // Act
+            let desserts = try await sut.getAllDesserts().meals
+            // Assert
+            XCTAssertEqual(desserts.count, 65)
+        }
     }
     
     // MARK: - Helpers
@@ -66,36 +76,3 @@ final class MainDessertRepositorySpy_Tests: XCTestCase {
 
 
 
-extension XCTestCase {
-    func runAsyncTest(
-        named testName: String = #function,
-        in file: StaticString = #file,
-        at line: UInt = #line,
-        withTimeout timeout: TimeInterval = 10,
-        test: @escaping () async throws -> Void
-    ) {
-        var thrownError: Error?
-        let errorHandler = { thrownError = $0 }
-        let expectation = expectation(description: testName)
-
-        Task {
-            do {
-                try await test()
-            } catch {
-                errorHandler(error)
-            }
-
-            expectation.fulfill()
-        }
-
-        waitForExpectations(timeout: timeout)
-
-        if let error = thrownError {
-            XCTFail(
-                "Async error thrown: \(error)",
-                file: file,
-                line: line
-            )
-        }
-    }
-}
