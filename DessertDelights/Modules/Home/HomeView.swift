@@ -9,5 +9,5 @@ import Foundation
 
 enum HomeView {
     case root
-    case dessertDetails
+    case dessertDetails(dessertId: String)
 }

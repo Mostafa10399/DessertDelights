@@ -17,7 +17,7 @@ struct LoaderView: View {
                     .scaleEffect(1.74)
                     .frame(width: 150, height: 150)
                     .tint(.white)
-                    .background(Color(.black1).opacity(0.2))
+                    .background(Color(.black12).opacity(0.2))
                     .clipShape(RoundedRectangle(cornerRadius: 10))
             }
     }

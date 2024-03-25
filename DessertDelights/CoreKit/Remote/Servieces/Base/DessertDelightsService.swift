@@ -13,6 +13,6 @@ protocol DessertDelightsService: RemoteService {
 
 extension DessertDelightsService {
     public var baseUrl: String {
-        return "https://themealdb.com/api/json/v1/1"
+        return "https://themealdb.com"
     }
 }

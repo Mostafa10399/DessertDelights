@@ -23,6 +23,9 @@ struct HomeRootView: View {
                 LazyVGrid(columns: [GridItem(), GridItem()], alignment: .center, spacing: 12, content: {
                     ForEach(desserts, id: \.id) { item in
                         DessertCell(width: geo.size.width / 2.1, dessert: item)
+                            .onTapGesture {
+                                viewModel.didTapOnDessert(dessertId: item.id)
+                            }
                     }
                 })
                 .frame(maxWidth: .infinity)
@@ -43,7 +46,7 @@ struct HomeRootView: View {
 }
 
 #Preview {
-    HomeRootView(viewModel: HomeRootViewModel(filterRepository: MainFilterRepository(remoteApi: DessertDelightsFilterApis())))
+    HomeRootView(viewModel: HomeRootViewModel(dessertRepository: MainDessertRepository(remoteApi: DessertDelightsDessertApis()), goToDessertDetailsView: HomeViewModel()))
 }
 
 
