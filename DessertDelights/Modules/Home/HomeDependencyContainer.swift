@@ -42,7 +42,9 @@ final class HomeDependencyContainer {
     
     private func makeHomeRootViewModel() -> HomeRootViewModel {
         let filterRepository = makeFilterRepository()
-        return HomeRootViewModel(filterRepository: filterRepository)
+        return HomeRootViewModel(
+            filterRepository: filterRepository,
+            goToDessertDetailsView: sharedHomeViewModel)
     }
     
     private func makeFilterRepository() -> FilterRepository {

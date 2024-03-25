@@ -25,9 +25,11 @@ struct DessertCell: View {
                      ProgressView()
                  }
             case .success(let image):
-                                image.resizable()
-            case .failure(let error):
-                                Text(error.localizedDescription)
+                image
+                    .resizable()
+            case .failure(_):
+                Image(.launhBackground)
+                    .resizable()
             @unknown default:
                 EmptyView()
             }

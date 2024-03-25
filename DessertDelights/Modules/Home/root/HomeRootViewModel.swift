@@ -12,16 +12,20 @@ final class HomeRootViewModel: ObservableObject, GetAllDessertsUseCase {
     // MARK: - Properties
     
     var filterRepository: FilterRepository
+    private let goToDessertDetailsView: GoToDessertDetailsView
     @Published private(set) var isDataLoading: Bool
     @Published var errorMessage: ErrorMessage?
     var desserts: [DessertPresentable]?
     
     // MARK: - Methods
     
-    init(filterRepository: FilterRepository) {
-        self.filterRepository = filterRepository
-        self.isDataLoading = false
-    }
+    init(
+        filterRepository: FilterRepository,
+        goToDessertDetailsView: GoToDessertDetailsView) {
+            self.filterRepository = filterRepository
+            self.goToDessertDetailsView = goToDessertDetailsView
+            self.isDataLoading = false
+        }
     
     func setDesserts() {
         Task { [weak self] in
@@ -36,6 +40,10 @@ final class HomeRootViewModel: ObservableObject, GetAllDessertsUseCase {
                 strongSelf.setErrorMessage(errorMessage)
             }
         }
+    }
+    
+    func didTapOnDessert() {
+        goToDessertDetailsView.navigateToDessertDetailsView()
     }
     
     private func setIsDataLoading(_ value: Bool) {
