@@ -13,11 +13,11 @@ final class DessertDelightsDessertApis: DessertApis {
     
     // MARK: - Methods
     
-    func getAllDesserts() async throws -> Meals {
+   public func getAllDesserts() async throws -> Meals {
          try await request(DessertService.getDesserts)
     }
     
-    func getDessertDetails(by id: String) async throws -> MealDetails {
+    public func getDessertDetails(by id: String) async throws -> MealDetails {
         try await request(DessertService.getDessertDetails(id: id))
     }
     

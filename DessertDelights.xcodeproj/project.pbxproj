@@ -69,6 +69,11 @@
 		DEBC63532BB178A60072CE0D /* GetDessertDetailsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBC63522BB178A60072CE0D /* GetDessertDetailsUseCase.swift */; };
 		DEBC63552BB17ABB0072CE0D /* DessertDetailsPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBC63542BB17ABB0072CE0D /* DessertDetailsPresentable.swift */; };
 		DEBC63572BB1B05A0072CE0D /* ScreenStateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBC63562BB1B05A0072CE0D /* ScreenStateProtocol.swift */; };
+		DEBC63592BB1F63E0072CE0D /* DessertsList.json in Resources */ = {isa = PBXBuildFile; fileRef = DEBC63582BB1F63E0072CE0D /* DessertsList.json */; };
+		DEBC635B2BB1F6830072CE0D /* DessertDelightsDessertApis_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBC635A2BB1F6830072CE0D /* DessertDelightsDessertApis_Tests.swift */; };
+		DEBC635D2BB1F70E0072CE0D /* Bundle+UnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBC635C2BB1F70E0072CE0D /* Bundle+UnitTest.swift */; };
+		DEBC635F2BB205850072CE0D /* MainDessertRepositorySpy_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBC635E2BB205850072CE0D /* MainDessertRepositorySpy_Tests.swift */; };
+		DEBC63612BB20B080072CE0D /* DessertDelightsDessertApiSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBC63602BB20B080072CE0D /* DessertDelightsDessertApiSpy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -166,6 +171,11 @@
 		DEBC63522BB178A60072CE0D /* GetDessertDetailsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDessertDetailsUseCase.swift; sourceTree = "<group>"; };
 		DEBC63542BB17ABB0072CE0D /* DessertDetailsPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertDetailsPresentable.swift; sourceTree = "<group>"; };
 		DEBC63562BB1B05A0072CE0D /* ScreenStateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenStateProtocol.swift; sourceTree = "<group>"; };
+		DEBC63582BB1F63E0072CE0D /* DessertsList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DessertsList.json; sourceTree = "<group>"; };
+		DEBC635A2BB1F6830072CE0D /* DessertDelightsDessertApis_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertDelightsDessertApis_Tests.swift; sourceTree = "<group>"; };
+		DEBC635C2BB1F70E0072CE0D /* Bundle+UnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+UnitTest.swift"; sourceTree = "<group>"; };
+		DEBC635E2BB205850072CE0D /* MainDessertRepositorySpy_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDessertRepositorySpy_Tests.swift; sourceTree = "<group>"; };
+		DEBC63602BB20B080072CE0D /* DessertDelightsDessertApiSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertDelightsDessertApiSpy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,6 +283,11 @@
 			children = (
 				DE3EF6A52BAC475000F3A996 /* DessertDelightsTests.swift */,
 				DE1AD9082BB0AD7100C85A54 /* HomeRootViewModel_Tests.swift */,
+				DEBC635A2BB1F6830072CE0D /* DessertDelightsDessertApis_Tests.swift */,
+				DEBC635E2BB205850072CE0D /* MainDessertRepositorySpy_Tests.swift */,
+				DEBC63582BB1F63E0072CE0D /* DessertsList.json */,
+				DEBC635C2BB1F70E0072CE0D /* Bundle+UnitTest.swift */,
+				DEBC63602BB20B080072CE0D /* DessertDelightsDessertApiSpy.swift */,
 			);
 			path = DessertDelightsTests;
 			sourceTree = "<group>";
@@ -623,6 +638,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEBC63592BB1F63E0072CE0D /* DessertsList.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -695,7 +711,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE3EF6A62BAC475000F3A996 /* DessertDelightsTests.swift in Sources */,
+				DEBC635D2BB1F70E0072CE0D /* Bundle+UnitTest.swift in Sources */,
 				DE1AD9092BB0AD7100C85A54 /* HomeRootViewModel_Tests.swift in Sources */,
+				DEBC63612BB20B080072CE0D /* DessertDelightsDessertApiSpy.swift in Sources */,
+				DEBC635B2BB1F6830072CE0D /* DessertDelightsDessertApis_Tests.swift in Sources */,
+				DEBC635F2BB205850072CE0D /* MainDessertRepositorySpy_Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

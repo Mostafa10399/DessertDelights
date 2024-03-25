@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct MealDetails: Codable {
+public struct MealDetails: Codable {
     let meals: [[String: String?]]
 }

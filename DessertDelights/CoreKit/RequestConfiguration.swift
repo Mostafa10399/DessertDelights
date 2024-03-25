@@ -12,15 +12,15 @@ public struct RequestConfiguration {
     
     // MARK: - Properties
     
-    let path: String
-    let method: HTTPMethod
-    let headers: [HTTPHeader]?
-    let parameters: Parameters?
-    let encoding: ParameterEncoding
+    public let path: String
+    public let method: HTTPMethod
+    public let headers: [HTTPHeader]?
+    public let parameters: Parameters?
+    public let encoding: ParameterEncoding
 
     // MARK: - Methods
     
-    internal init(method: HTTPMethod = .get,
+    public init(method: HTTPMethod = .get,
                   path: String,
                   headers: [HTTPHeader]? = nil,
                   parameters: Parameters? = nil,

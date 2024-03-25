@@ -14,22 +14,40 @@ final class HomeRootViewModel_Tests: XCTestCase {
     // MARK: - Properties
     
     private var homeRootViewModel: HomeRootViewModel?
+    var cancellable: Set<AnyCancellable> = []
     
     // MARK: - Methods
 
     override func setUpWithError() throws {
         self.homeRootViewModel = HomeRootViewModel(
-            filterRepository: MainDessertRepository(remoteApi: DessertDelightsDessertApis()),
+            dessertRepository: MainDessertRepository(remoteApi: DessertDelightsDessertApis()),
             goToDessertDetailsView: HomeViewModel())
     }
 
     override func tearDownWithError() throws {
         homeRootViewModel = nil
     }
+    
+    func test_homeRootViewModel_notSetDesserts_whenNotCallingTheEndPoint() throws {
+        // Arrange
+        guard let homeRootViewModel = self.homeRootViewModel else {
+            XCTFail()
+            return }
+        // Act
+        let expectation = expectation(description: "Set Desserts")
+        homeRootViewModel.$isDataLoading
+            .sink { _ in
+                expectation.fulfill()
+            }
+            .store(in: &cancellable)
+        wait(for: [expectation], timeout: 2)
+        // Assert
+        XCTAssertNil(homeRootViewModel.desserts)
+    }
 
     func test_homeRootViewModel_setDesserts_dessertShouldBeAddedSuccessfully() throws {
         // Arrange
-        var cancellable: Set<AnyCancellable> = []
+      
         guard let homeRootViewModel = self.homeRootViewModel else {
             XCTFail()
             return }
@@ -47,20 +65,4 @@ final class HomeRootViewModel_Tests: XCTestCase {
         XCTAssertNotNil(homeRootViewModel.desserts)
     }
     
-    
-    func test_homeRootViewModel_setDesserts_dessertShouldThrowError() throws {
-        // Arrange
-        guard let homeRootViewModel = self.homeRootViewModel else {
-            XCTFail()
-            return }
-        // Act
-        let expectation = expectation(description: "Throw Error")
-        homeRootViewModel.setDesserts()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                expectation.fulfill()
-            }
-        wait(for: [expectation], timeout: 2)
-        // Assert
-        XCTAssertNotNil(homeRootViewModel.desserts)
-    }
 }
