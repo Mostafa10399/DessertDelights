@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DE1AD8F42BAF7A9A00C85A54 /* FilterApis.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1AD8F32BAF7A9A00C85A54 /* FilterApis.swift */; };
-		DE1AD8F92BAF7B2F00C85A54 /* DessertDelightsFilterApis.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1AD8F82BAF7B2F00C85A54 /* DessertDelightsFilterApis.swift */; };
-		DE1AD8FC2BAF7BFB00C85A54 /* FilterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1AD8FB2BAF7BFB00C85A54 /* FilterRepository.swift */; };
-		DE1AD8FE2BAF7C5800C85A54 /* MainFilterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1AD8FD2BAF7C5800C85A54 /* MainFilterRepository.swift */; };
+		DE1AD8F42BAF7A9A00C85A54 /* DessertApis.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1AD8F32BAF7A9A00C85A54 /* DessertApis.swift */; };
+		DE1AD8F92BAF7B2F00C85A54 /* DessertDelightsDessertApis.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1AD8F82BAF7B2F00C85A54 /* DessertDelightsDessertApis.swift */; };
+		DE1AD8FC2BAF7BFB00C85A54 /* DessertRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1AD8FB2BAF7BFB00C85A54 /* DessertRepository.swift */; };
+		DE1AD8FE2BAF7C5800C85A54 /* MainDessertRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1AD8FD2BAF7C5800C85A54 /* MainDessertRepository.swift */; };
 		DE1AD9002BAF802500C85A54 /* GetAllDessertsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1AD8FF2BAF802500C85A54 /* GetAllDessertsUseCase.swift */; };
 		DE1AD9022BAF80CE00C85A54 /* DessertPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1AD9012BAF80CE00C85A54 /* DessertPresentable.swift */; };
 		DE1AD9052BAF86BE00C85A54 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1AD9042BAF86BE00C85A54 /* LoaderView.swift */; };
@@ -53,7 +53,7 @@
 		DE566A582BAF66C900DABE30 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE566A572BAF66C900DABE30 /* ErrorMessage.swift */; };
 		DE566A5A2BAF675C00DABE30 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = DE566A592BAF675C00DABE30 /* AlamofireDynamic */; };
 		DE566A5B2BAF675C00DABE30 /* AlamofireDynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = DE566A592BAF675C00DABE30 /* AlamofireDynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		DE566A5E2BAF785300DABE30 /* FilterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE566A5D2BAF785300DABE30 /* FilterService.swift */; };
+		DE566A5E2BAF785300DABE30 /* DessertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE566A5D2BAF785300DABE30 /* DessertService.swift */; };
 		DE6B09E62BAE22E00044D020 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = DE6B09E52BAE22E00044D020 /* Localizable.xcstrings */; };
 		DE6B09EB2BAE76370044D020 /* HomeRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B09EA2BAE76370044D020 /* HomeRootView.swift */; };
 		DE6B09ED2BAE76470044D020 /* HomeRootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B09EC2BAE76470044D020 /* HomeRootViewModel.swift */; };
@@ -65,6 +65,10 @@
 		DE6B09FB2BAE8F870044D020 /* Poppins-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE6B09F62BAE8F870044D020 /* Poppins-ExtraLight.ttf */; };
 		DE6B09FC2BAE8F870044D020 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE6B09F72BAE8F870044D020 /* Poppins-Regular.ttf */; };
 		DE6B09FF2BAE90F40044D020 /* DessertCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B09FE2BAE90F40044D020 /* DessertCell.swift */; };
+		DEBC63512BB174CC0072CE0D /* MealDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBC63502BB174CC0072CE0D /* MealDetails.swift */; };
+		DEBC63532BB178A60072CE0D /* GetDessertDetailsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBC63522BB178A60072CE0D /* GetDessertDetailsUseCase.swift */; };
+		DEBC63552BB17ABB0072CE0D /* DessertDetailsPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBC63542BB17ABB0072CE0D /* DessertDetailsPresentable.swift */; };
+		DEBC63572BB1B05A0072CE0D /* ScreenStateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBC63562BB1B05A0072CE0D /* ScreenStateProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,10 +103,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		DE1AD8F32BAF7A9A00C85A54 /* FilterApis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterApis.swift; sourceTree = "<group>"; };
-		DE1AD8F82BAF7B2F00C85A54 /* DessertDelightsFilterApis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertDelightsFilterApis.swift; sourceTree = "<group>"; };
-		DE1AD8FB2BAF7BFB00C85A54 /* FilterRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterRepository.swift; sourceTree = "<group>"; };
-		DE1AD8FD2BAF7C5800C85A54 /* MainFilterRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFilterRepository.swift; sourceTree = "<group>"; };
+		DE1AD8F32BAF7A9A00C85A54 /* DessertApis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertApis.swift; sourceTree = "<group>"; };
+		DE1AD8F82BAF7B2F00C85A54 /* DessertDelightsDessertApis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertDelightsDessertApis.swift; sourceTree = "<group>"; };
+		DE1AD8FB2BAF7BFB00C85A54 /* DessertRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertRepository.swift; sourceTree = "<group>"; };
+		DE1AD8FD2BAF7C5800C85A54 /* MainDessertRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDessertRepository.swift; sourceTree = "<group>"; };
 		DE1AD8FF2BAF802500C85A54 /* GetAllDessertsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllDessertsUseCase.swift; sourceTree = "<group>"; };
 		DE1AD9012BAF80CE00C85A54 /* DessertPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertPresentable.swift; sourceTree = "<group>"; };
 		DE1AD9042BAF86BE00C85A54 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
@@ -145,7 +149,7 @@
 		DE566A532BAF666400DABE30 /* RequestConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestConfiguration.swift; sourceTree = "<group>"; };
 		DE566A552BAF668100DABE30 /* RemoteAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAPI.swift; sourceTree = "<group>"; };
 		DE566A572BAF66C900DABE30 /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
-		DE566A5D2BAF785300DABE30 /* FilterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterService.swift; sourceTree = "<group>"; };
+		DE566A5D2BAF785300DABE30 /* DessertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertService.swift; sourceTree = "<group>"; };
 		DE6B09E52BAE22E00044D020 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		DE6B09E72BAE721C0044D020 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		DE6B09EA2BAE76370044D020 /* HomeRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRootView.swift; sourceTree = "<group>"; };
@@ -158,6 +162,10 @@
 		DE6B09F62BAE8F870044D020 /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-ExtraLight.ttf"; path = "Fonts/Poppins-ExtraLight.ttf"; sourceTree = SOURCE_ROOT; };
 		DE6B09F72BAE8F870044D020 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Regular.ttf"; path = "Fonts/Poppins-Regular.ttf"; sourceTree = SOURCE_ROOT; };
 		DE6B09FE2BAE90F40044D020 /* DessertCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertCell.swift; sourceTree = "<group>"; };
+		DEBC63502BB174CC0072CE0D /* MealDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetails.swift; sourceTree = "<group>"; };
+		DEBC63522BB178A60072CE0D /* GetDessertDetailsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDessertDetailsUseCase.swift; sourceTree = "<group>"; };
+		DEBC63542BB17ABB0072CE0D /* DessertDetailsPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertDetailsPresentable.swift; sourceTree = "<group>"; };
+		DEBC63562BB1B05A0072CE0D /* ScreenStateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenStateProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,22 +195,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DE1AD8F72BAF7B1000C85A54 /* FilterApis */ = {
+		DE1AD8F72BAF7B1000C85A54 /* DessertApis */ = {
 			isa = PBXGroup;
 			children = (
-				DE1AD8F32BAF7A9A00C85A54 /* FilterApis.swift */,
-				DE1AD8F82BAF7B2F00C85A54 /* DessertDelightsFilterApis.swift */,
+				DE1AD8F32BAF7A9A00C85A54 /* DessertApis.swift */,
+				DE1AD8F82BAF7B2F00C85A54 /* DessertDelightsDessertApis.swift */,
 			);
-			path = FilterApis;
+			path = DessertApis;
 			sourceTree = "<group>";
 		};
-		DE1AD8FA2BAF7BDF00C85A54 /* FilterRepository */ = {
+		DE1AD8FA2BAF7BDF00C85A54 /* DessertRepository */ = {
 			isa = PBXGroup;
 			children = (
-				DE1AD8FB2BAF7BFB00C85A54 /* FilterRepository.swift */,
-				DE1AD8FD2BAF7C5800C85A54 /* MainFilterRepository.swift */,
+				DE1AD8FB2BAF7BFB00C85A54 /* DessertRepository.swift */,
+				DE1AD8FD2BAF7C5800C85A54 /* MainDessertRepository.swift */,
 			);
-			path = FilterRepository;
+			path = DessertRepository;
 			sourceTree = "<group>";
 		};
 		DE1AD9032BAF86A400C85A54 /* Reusable */ = {
@@ -352,6 +360,7 @@
 				DE3EF6F12BAD346300F3A996 /* NavigationAction.swift */,
 				DE566A572BAF66C900DABE30 /* ErrorMessage.swift */,
 				DE1AD9062BAF877100C85A54 /* View+IfModifier.swift */,
+				DEBC63562BB1B05A0072CE0D /* ScreenStateProtocol.swift */,
 			);
 			path = "Extenstions ";
 			sourceTree = "<group>";
@@ -374,6 +383,7 @@
 			isa = PBXGroup;
 			children = (
 				DE1AD8FF2BAF802500C85A54 /* GetAllDessertsUseCase.swift */,
+				DEBC63522BB178A60072CE0D /* GetDessertDetailsUseCase.swift */,
 			);
 			path = Usecase;
 			sourceTree = "<group>";
@@ -382,6 +392,7 @@
 			isa = PBXGroup;
 			children = (
 				DE1AD9012BAF80CE00C85A54 /* DessertPresentable.swift */,
+				DEBC63542BB17ABB0072CE0D /* DessertDetailsPresentable.swift */,
 			);
 			path = Presentable;
 			sourceTree = "<group>";
@@ -389,7 +400,7 @@
 		DE566A422BAF623900DABE30 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				DE1AD8FA2BAF7BDF00C85A54 /* FilterRepository */,
+				DE1AD8FA2BAF7BDF00C85A54 /* DessertRepository */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -408,6 +419,7 @@
 			children = (
 				DE566A472BAF643600DABE30 /* Meals.swift */,
 				DE566A452BAF63AA00DABE30 /* Meal.swift */,
+				DEBC63502BB174CC0072CE0D /* MealDetails.swift */,
 			);
 			path = DTOs;
 			sourceTree = "<group>";
@@ -416,7 +428,7 @@
 			isa = PBXGroup;
 			children = (
 				DE566A4A2BAF64F700DABE30 /* Base */,
-				DE566A5D2BAF785300DABE30 /* FilterService.swift */,
+				DE566A5D2BAF785300DABE30 /* DessertService.swift */,
 			);
 			path = Servieces;
 			sourceTree = "<group>";
@@ -440,7 +452,7 @@
 		DE566A5F2BAF79FA00DABE30 /* Apis */ = {
 			isa = PBXGroup;
 			children = (
-				DE1AD8F72BAF7B1000C85A54 /* FilterApis */,
+				DE1AD8F72BAF7B1000C85A54 /* DessertApis */,
 			);
 			path = Apis;
 			sourceTree = "<group>";
@@ -641,10 +653,11 @@
 				DE3EF6F22BAD346300F3A996 /* NavigationAction.swift in Sources */,
 				DE3EF6D62BACD1D700F3A996 /* NiblessNavigationController.swift in Sources */,
 				DE3EF6C12BAC50DE00F3A996 /* MainDependencyContainer .swift in Sources */,
-				DE1AD8F92BAF7B2F00C85A54 /* DessertDelightsFilterApis.swift in Sources */,
+				DE1AD8F92BAF7B2F00C85A54 /* DessertDelightsDessertApis.swift in Sources */,
 				DE566A4C2BAF653100DABE30 /* DessertDelightsService.swift in Sources */,
 				DE566A462BAF63AA00DABE30 /* Meal.swift in Sources */,
-				DE1AD8F42BAF7A9A00C85A54 /* FilterApis.swift in Sources */,
+				DE1AD8F42BAF7A9A00C85A54 /* DessertApis.swift in Sources */,
+				DEBC63532BB178A60072CE0D /* GetDessertDetailsUseCase.swift in Sources */,
 				DE1AD9052BAF86BE00C85A54 /* LoaderView.swift in Sources */,
 				DE3EF6952BAC474F00F3A996 /* AppDelegate.swift in Sources */,
 				DE566A482BAF643600DABE30 /* Meals.swift in Sources */,
@@ -652,13 +665,15 @@
 				DE3EF6F72BADD68900F3A996 /* HomeNavigationController.swift in Sources */,
 				DE566A582BAF66C900DABE30 /* ErrorMessage.swift in Sources */,
 				DE1AD9072BAF877100C85A54 /* View+IfModifier.swift in Sources */,
+				DEBC63552BB17ABB0072CE0D /* DessertDetailsPresentable.swift in Sources */,
 				DE1AD9002BAF802500C85A54 /* GetAllDessertsUseCase.swift in Sources */,
+				DEBC63512BB174CC0072CE0D /* MealDetails.swift in Sources */,
 				DE3EF6E52BAD305D00F3A996 /* LaunchRootView.swift in Sources */,
 				DE566A562BAF668100DABE30 /* RemoteAPI.swift in Sources */,
 				DE3EF6FD2BADD6B100F3A996 /* HomeView.swift in Sources */,
-				DE1AD8FE2BAF7C5800C85A54 /* MainFilterRepository.swift in Sources */,
+				DE1AD8FE2BAF7C5800C85A54 /* MainDessertRepository.swift in Sources */,
 				DE3EF6C32BAC513F00F3A996 /* MainNavigationController .swift in Sources */,
-				DE1AD8FC2BAF7BFB00C85A54 /* FilterRepository.swift in Sources */,
+				DE1AD8FC2BAF7BFB00C85A54 /* DessertRepository.swift in Sources */,
 				DE3EF6EE2BAD341700F3A996 /* ViewControllerContainment.swift in Sources */,
 				DE566A542BAF666400DABE30 /* RequestConfiguration.swift in Sources */,
 				DE3EF6E02BAD25D400F3A996 /* LaunchViewModel.swift in Sources */,
@@ -667,7 +682,8 @@
 				DE6B09EF2BAE77CA0044D020 /* DessertDetailsView.swift in Sources */,
 				DE3EF6F92BADD69700F3A996 /* HomeDependencyContainer.swift in Sources */,
 				DE3EF6D42BACD1D700F3A996 /* NiblessViewController.swift in Sources */,
-				DE566A5E2BAF785300DABE30 /* FilterService.swift in Sources */,
+				DE566A5E2BAF785300DABE30 /* DessertService.swift in Sources */,
+				DEBC63572BB1B05A0072CE0D /* ScreenStateProtocol.swift in Sources */,
 				DE3EF6DE2BAD25CA00F3A996 /* LaunchDependencyContainer.swift in Sources */,
 				DE3EF6EA2BAD33DE00F3A996 /* UINavigationController+PopToViewController.swift in Sources */,
 				DE6B09ED2BAE76470044D020 /* HomeRootViewModel.swift in Sources */,

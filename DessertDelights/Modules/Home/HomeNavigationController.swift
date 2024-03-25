@@ -14,7 +14,7 @@ final class HomeNavigationController: NiblessNavigationController {
     
     private let viewModel: HomeViewModel
     private let homeRootView: HomeRootView
-    private let makeDessertDetailsView: ((Int) -> DessertDetailsView)
+    private let makeDessertDetailsView: ((String) -> DessertDetailsView)
     private var cancellable: Set<AnyCancellable>
     
     // MARK: - Methods
@@ -22,7 +22,7 @@ final class HomeNavigationController: NiblessNavigationController {
     init(
         viewModel: HomeViewModel,
         homeRootView: HomeRootView,
-        dessertDetailsViewFactory: @escaping (Int) -> DessertDetailsView) {
+        dessertDetailsViewFactory: @escaping (String) -> DessertDetailsView) {
             self.viewModel = viewModel
             self.homeRootView = homeRootView
             self.makeDessertDetailsView = dessertDetailsViewFactory
@@ -47,11 +47,11 @@ final class HomeNavigationController: NiblessNavigationController {
         let appearance = UINavigationBarAppearance()
         appearance.configureWithOpaqueBackground()
         appearance.titleTextAttributes = [
-            .foregroundColor: UIColor.accent,
+            .foregroundColor: UIColor.black12,
             .font: UIFont(name: "Poppins-SemiBold", size: 16) ?? .systemFont(ofSize: 16)
         ]
         appearance.largeTitleTextAttributes = [
-            .foregroundColor: UIColor.accent,
+            .foregroundColor: UIColor.black12,
             .font: UIFont(name: "Poppins-Bold", size: 24) ?? .systemFont(ofSize: 24)
         ]
         appearance.shadowImage = UIImage()
@@ -80,8 +80,8 @@ final class HomeNavigationController: NiblessNavigationController {
         switch view {
         case .root:
             presentHomeRootView()
-        case .dessertDetails:
-            presentDessertDetailsView(id: 1)
+        case let .dessertDetails(dessertId):
+            presentDessertDetailsView(id: dessertId)
         }
     }
     
@@ -89,7 +89,7 @@ final class HomeNavigationController: NiblessNavigationController {
         self.navigationController?.popToRootViewController(animated: false)
     }
     
-    private func presentDessertDetailsView(id: Int) {
+    private func presentDessertDetailsView(id: String) {
         let vc = UIHostingController(rootView: makeDessertDetailsView(id)).with { $0.modalPresentationStyle = .overFullScreen }
         pushViewController(vc, animated: true)
     }

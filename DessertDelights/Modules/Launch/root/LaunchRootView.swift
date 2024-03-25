@@ -12,7 +12,7 @@ struct LaunchRootView: View {
     let viewModel: LaunchRootViewModel
     
     var body: some View {
-        Image(.launhBackground)
+        Image(.launchBackground)
             .resizable()
             .ignoresSafeArea()
             .onAppear{

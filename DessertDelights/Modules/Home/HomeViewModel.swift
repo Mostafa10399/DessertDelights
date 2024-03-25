@@ -19,12 +19,12 @@ final class HomeViewModel: GoToDessertDetailsView {
         self.view = .root
     }
     
-    func navigateToDessertDetailsView() {
-        view = .dessertDetails
+    func navigateToDessertDetailsView(by dessertId: String) {
+        view = .dessertDetails(dessertId: dessertId)
     }
     
 }
 
 protocol GoToDessertDetailsView {
-    func navigateToDessertDetailsView()
+    func navigateToDessertDetailsView(by dessertId: String)
 }

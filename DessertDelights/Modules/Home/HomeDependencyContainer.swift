@@ -27,8 +27,9 @@ final class HomeDependencyContainer {
     func makeHomeNavigationController() -> HomeNavigationController {
         let homeRootViewModel = makeHomeRootViewModel()
         let homeRootView = makeHomeRootView(viewModel: homeRootViewModel)
-        let dessertDetailsViewFactory = { (id: Int) in
-            self.makeDessertDetailsView()
+        let dessertDetailsViewFactory = { (id: String) in
+            let viewModel = self.makeDessertDetailsViewModel(dessertId: id)
+            return self.makeDessertDetailsView(viewModel: viewModel)
         }
         return HomeNavigationController(
             viewModel: sharedHomeViewModel,
@@ -41,17 +42,23 @@ final class HomeDependencyContainer {
     }
     
     private func makeHomeRootViewModel() -> HomeRootViewModel {
-        let filterRepository = makeFilterRepository()
+        let dessertRepository = makeDessertRepository()
         return HomeRootViewModel(
-            filterRepository: filterRepository,
+            dessertRepository: dessertRepository,
             goToDessertDetailsView: sharedHomeViewModel)
     }
     
-    private func makeFilterRepository() -> FilterRepository {
-        MainFilterRepository(remoteApi: DessertDelightsFilterApis())
+    private func makeDessertRepository() -> DessertRepository {
+        MainDessertRepository(remoteApi: DessertDelightsDessertApis())
     }
     
-    private func makeDessertDetailsView() -> DessertDetailsView {
-        DessertDetailsView()
+    private func makeDessertDetailsViewModel(dessertId: String) -> DessertDetailsViewModel {
+        DessertDetailsViewModel(
+            dessertId: dessertId,
+            dessertRepository: makeDessertRepository())
+    }
+    
+    private func makeDessertDetailsView(viewModel: DessertDetailsViewModel) -> DessertDetailsView {
+        DessertDetailsView(viewModel: viewModel)
     }
 }

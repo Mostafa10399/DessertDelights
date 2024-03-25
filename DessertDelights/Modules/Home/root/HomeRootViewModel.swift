@@ -7,22 +7,22 @@
 
 import Foundation
 
-final class HomeRootViewModel: ObservableObject, GetAllDessertsUseCase {
+final class HomeRootViewModel: ObservableObject, GetAllDessertsUseCase, ScreenStateProtocol {
         
     // MARK: - Properties
     
-    var filterRepository: FilterRepository
+    var dessertRepository: DessertRepository
     private let goToDessertDetailsView: GoToDessertDetailsView
-    @Published private(set) var isDataLoading: Bool
+    @Published var isDataLoading: Bool
     @Published var errorMessage: ErrorMessage?
     var desserts: [DessertPresentable]?
     
     // MARK: - Methods
     
     init(
-        filterRepository: FilterRepository,
+        dessertRepository: DessertRepository,
         goToDessertDetailsView: GoToDessertDetailsView) {
-            self.filterRepository = filterRepository
+            self.dessertRepository = dessertRepository
             self.goToDessertDetailsView = goToDessertDetailsView
             self.isDataLoading = false
         }
@@ -30,9 +30,7 @@ final class HomeRootViewModel: ObservableObject, GetAllDessertsUseCase {
     func setDesserts() {
         Task { [weak self] in
             guard let strongSelf = self else { return }
-            defer {
-                strongSelf.setIsDataLoading(false)
-            }
+            defer { strongSelf.setIsDataLoading(false) }
             do {
                 strongSelf.setIsDataLoading(true)
                 strongSelf.desserts = try await strongSelf.getAllDesserts()
@@ -42,26 +40,7 @@ final class HomeRootViewModel: ObservableObject, GetAllDessertsUseCase {
         }
     }
     
-    func didTapOnDessert() {
-        goToDessertDetailsView.navigateToDessertDetailsView()
+    func didTapOnDessert(dessertId: String) {
+        goToDessertDetailsView.navigateToDessertDetailsView(by: dessertId)
     }
-    
-    private func setIsDataLoading(_ value: Bool) {
-        DispatchQueue
-            .main
-            .async { [weak self] in
-                guard let strongSelf = self else { return }
-                strongSelf.isDataLoading = value
-            }
-    }
-    
-    private func setErrorMessage(_ value: ErrorMessage) {
-        DispatchQueue
-            .main
-            .async { [weak self] in
-                guard let strongSelf = self else { return }
-                strongSelf.errorMessage = value
-            }
-    }
-    
 }

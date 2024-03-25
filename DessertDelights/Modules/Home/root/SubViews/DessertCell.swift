@@ -28,7 +28,7 @@ struct DessertCell: View {
                 image
                     .resizable()
             case .failure(_):
-                Image(.launhBackground)
+                Image(.launchBackground)
                     .resizable()
             @unknown default:
                 EmptyView()

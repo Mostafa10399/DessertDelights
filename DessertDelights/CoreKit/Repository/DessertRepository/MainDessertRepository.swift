@@ -7,19 +7,23 @@
 
 import Foundation
 
-final class MainFilterRepository: FilterRepository {
-    
+final class MainDessertRepository: DessertRepository {
+
     // MARK: - Properties
     
-    private let remoteApi: FilterApis
+    private let remoteApi: DessertApis
     
     // MARK: - Methods
     
-    init(remoteApi: FilterApis) {
+    init(remoteApi: DessertApis) {
         self.remoteApi = remoteApi
     }
     
     func getAllDesserts() async throws -> Meals {
         try await remoteApi.getAllDesserts()
+    }
+    
+    func getDessertDetails(by id: String) async throws -> MealDetails {
+        try await remoteApi.getDessertDetails(by: id)
     }
 }

@@ -19,7 +19,7 @@ final class HomeRootViewModel_Tests: XCTestCase {
 
     override func setUpWithError() throws {
         self.homeRootViewModel = HomeRootViewModel(
-            filterRepository: MainFilterRepository(remoteApi: DessertDelightsFilterApis()),
+            filterRepository: MainDessertRepository(remoteApi: DessertDelightsDessertApis()),
             goToDessertDetailsView: HomeViewModel())
     }
 

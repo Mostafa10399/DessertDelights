@@ -24,7 +24,7 @@ struct HomeRootView: View {
                     ForEach(desserts, id: \.id) { item in
                         DessertCell(width: geo.size.width / 2.1, dessert: item)
                             .onTapGesture {
-                                viewModel.didTapOnDessert()
+                                viewModel.didTapOnDessert(dessertId: item.id)
                             }
                     }
                 })
@@ -46,7 +46,7 @@ struct HomeRootView: View {
 }
 
 #Preview {
-    HomeRootView(viewModel: HomeRootViewModel(filterRepository: MainFilterRepository(remoteApi: DessertDelightsFilterApis()), goToDessertDetailsView: HomeViewModel()))
+    HomeRootView(viewModel: HomeRootViewModel(dessertRepository: MainDessertRepository(remoteApi: DessertDelightsDessertApis()), goToDessertDetailsView: HomeViewModel()))
 }
 
 
