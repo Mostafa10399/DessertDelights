@@ -279,13 +279,13 @@
 				DE6B09E72BAE721C0044D020 /* Info.plist */,
 				DE3EF6942BAC474F00F3A996 /* AppDelegate.swift */,
 				DE6B09E52BAE22E00044D020 /* Localizable.xcstrings */,
+				DE3EF6982BAC475000F3A996 /* Assets.xcassets */,
 				DE6B09F22BAE8F6A0044D020 /* Fonts */,
 				DE3EF6BE2BAC4A3F00F3A996 /* Modules */,
 				DE3EF6CE2BACD1C900F3A996 /* NiblessComponents */,
 				DE3EF6E82BAD339400F3A996 /* Extenstions  */,
 				DE1AD9032BAF86A400C85A54 /* Reusable */,
 				DE566A3F2BAF61D200DABE30 /* CoreKit */,
-				DE3EF6982BAC475000F3A996 /* Assets.xcassets */,
 				DE3EF69A2BAC475000F3A996 /* Preview Content */,
 			);
 			path = DessertDelights;
