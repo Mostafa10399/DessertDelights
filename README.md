@@ -1,6 +1,5 @@
 # DessertDelights
 ![Simulator Screenshot - iPhone 15 Pro Max - 2024-03-26 at 19 13 47](https://github.com/Mostafa10399/DessertDelights/assets/51030209/8384e2dd-ca61-4498-a508-1d90cf9886f8)
-![Simulator Screenshot - iPhone 15 Pro Max - 2024-03-26 at 19 14 52](https://github.com/Mostafa10399/DessertDelights/assets/51030209/261283a9-80a8-4b20-885f-394944a5cee5)
 
 ## Requirements
 
