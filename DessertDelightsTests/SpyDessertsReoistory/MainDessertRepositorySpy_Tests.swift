@@ -48,30 +48,10 @@ final class MainDessertRepositorySpy_Tests: XCTestCase {
         }
     }
     
+    
     // MARK: - Helpers
     
-    private class MainDessertRepositorySpy: DessertRepository {
-        
-        // MARK: - Properties
-        
-        private let spy: DessertApis
-        
-        // MARK: - Methods
-        
-        init(spy: DessertApis) {
-            self.spy = spy
-        }
-        
-        func getAllDesserts() async throws -> DessertDelights.Meals {
-            try await spy.getAllDesserts()
-        }
-        
-        func getDessertDetails(by id: String) async throws -> DessertDelights.MealDetails {
-            try await spy.getDessertDetails(by: id)
-        }
-        
-        
-    }
+
     
 }
 

@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol DessertRepository {
+public protocol DessertRepository {
     func getAllDesserts() async throws -> Meals
     func getDessertDetails(by id: String) async throws -> MealDetails 
 }

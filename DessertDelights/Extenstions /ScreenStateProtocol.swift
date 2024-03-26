@@ -11,7 +11,7 @@ protocol ScreenStateProtocol: AnyObject {
     var isDataLoading: Bool { set get }
     var errorMessage: ErrorMessage? { set get }
     func setIsDataLoading(_ value: Bool)
-    func setErrorMessage(_ value: ErrorMessage)
+    func setErrorMessage(_ value: ErrorMessage?)
 }
 
 extension ScreenStateProtocol {
@@ -24,7 +24,7 @@ extension ScreenStateProtocol {
             }
     }
     
-     func setErrorMessage(_ value: ErrorMessage) {
+     func setErrorMessage(_ value: ErrorMessage?) {
         DispatchQueue
             .main
             .async { [weak self] in
