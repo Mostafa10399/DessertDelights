@@ -290,12 +290,12 @@
 			isa = PBXGroup;
 			children = (
 				DE3EF6A52BAC475000F3A996 /* DessertDelightsTests.swift */,
+				DE1AD9082BB0AD7100C85A54 /* HomeRootViewModel_Tests.swift */,
 				DEE06F362BB25A81000F11FA /* SpyUseCase */,
 				DE6FC7DF2BB2458C00D64CE1 /* SpyDessertService */,
 				DEBC63622BB232CD0072CE0D /* SpyDessertApis */,
 				DEBC63662BB235560072CE0D /* SpyDessertsReoistory */,
 				DEBC63632BB233510072CE0D /* Extensions */,
-				DE1AD9082BB0AD7100C85A54 /* HomeRootViewModel_Tests.swift */,
 			);
 			path = DessertDelightsTests;
 			sourceTree = "<group>";
