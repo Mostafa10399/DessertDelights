@@ -87,69 +87,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "8B1983A2-48A9-456E-8909-05083202233D"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DessertDelightsTests/HomeRootViewModel_Tests.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
-            landmarkName = "test_homeRootViewModel_setIsDataLoading_shouldBeTrue()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "8B1983A2-48A9-456E-8909-05083202233D - 25d19f2913dfc66"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DessertDelightsTests.HomeRootViewModel_Tests.test_homeRootViewModel_setIsDataLoading_shouldBeTrue() throws -&gt; ()"
-                  moduleName = "DessertDelightsTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mtor/Desktop/DessertDelights/DessertDelightsTests/HomeRootViewModel_Tests.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "85"
-                  endingLineNumber = "85"
-                  offsetFromSymbolStart = "740">
-               </Location>
-               <Location
-                  uuid = "8B1983A2-48A9-456E-8909-05083202233D - 25d19f2913dfc66"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DessertDelightsTests.HomeRootViewModel_Tests.test_homeRootViewModel_setIsDataLoading_shouldBeTrue() throws -&gt; ()"
-                  moduleName = "DessertDelightsTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mtor/Desktop/DessertDelights/DessertDelightsTests/HomeRootViewModel_Tests.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "85"
-                  endingLineNumber = "85"
-                  offsetFromSymbolStart = "876">
-               </Location>
-               <Location
-                  uuid = "8B1983A2-48A9-456E-8909-05083202233D - 25d19f2913dfc87"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DessertDelightsTests.HomeRootViewModel_Tests.test_homeRootViewModel_setIsDataLoading_shouldBeTrue() throws -&gt; ()"
-                  moduleName = "DessertDelightsTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mtor/Desktop/DessertDelights/DessertDelightsTests/HomeRootViewModel_Tests.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "84"
-                  endingLineNumber = "84"
-                  offsetFromSymbolStart = "856">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "C194EF47-1746-4D23-A13D-F358C9A522B5"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"

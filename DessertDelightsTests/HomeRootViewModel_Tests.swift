@@ -66,6 +66,27 @@ final class HomeRootViewModel_Tests: XCTestCase {
         XCTAssertEqual(dessert.count, 65)
     }
     
+    func test_homeRootViewModel_setDesserts_shouldThrowError() throws {
+        // Arrange
+        let sut = HomeRootViewModel(
+            dessertRepository: MainDessertRepositorySpy(spy: DessertDelightsDessertApiFailSpy()),
+            goToDessertDetailsView: HomeViewModel())
+        var errorMessage: ErrorMessage?
+        // Act
+        let expectation = expectation(description: "Set Desserts")
+        sut.setDesserts()
+        sut.$errorMessage
+            .dropFirst()
+            .sink { error in
+                errorMessage = error
+                expectation.fulfill()
+            }
+            .store(in: &cancellable)
+        wait(for: [expectation], timeout: 2)
+        // Assert
+        XCTAssertNotNil(errorMessage)
+    }
+    
     func test_homeRootViewModel_setIsDataLoading_shouldBeTrue() throws {
         // Arrange
         let sut = self.makeSut()
@@ -107,7 +128,7 @@ final class HomeRootViewModel_Tests: XCTestCase {
         let sut = self.makeSut()
         let errorMessage = ErrorMessage(title: "title", message: "Message")
         // Act
-        let expectation = expectation(description: "Set Desserts")
+        let expectation = expectation(description: #function)
         sut.setErrorMessage(errorMessage)
         sut.$errorMessage
             .dropFirst()
