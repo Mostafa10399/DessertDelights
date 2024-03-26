@@ -87,6 +87,9 @@ struct DessertDetailsView: View {
             }
         }
         .displayLoader(isLoading: viewModel.isDataLoading)
+        .displayError(errorMessage: viewModel.errorMessage, isFullScreen: false) {
+            viewModel.didTapOnTryAgain()
+        }
     }
 }
 

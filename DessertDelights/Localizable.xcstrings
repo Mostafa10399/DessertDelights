@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "Error" : {
+
+    },
     "Find Your Favorite Dessert" : {
 
     },
@@ -9,6 +12,9 @@
     },
     "Key" : {
       "extractionState" : "manual"
+    },
+    "Try Again" : {
+
     }
   },
   "version" : "1.0"

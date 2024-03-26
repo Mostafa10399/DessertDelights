@@ -35,6 +35,11 @@ final class DessertDetailsViewModel: ObservableObject, GetDessertDetailsUseCase,
             self.dessertIngredient = []
         }
     
+    func didTapOnTryAgain() {
+        setErrorMessage(nil)
+        fetchDessertDetails()
+    }
+    
     func fetchDessertDetails() {
         Task { [weak self] in
             guard let strongSelf = self else { return }

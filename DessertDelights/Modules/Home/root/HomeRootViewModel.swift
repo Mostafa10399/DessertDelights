@@ -14,7 +14,7 @@ final class HomeRootViewModel: ObservableObject, GetAllDessertsUseCase, ScreenSt
     var dessertRepository: DessertRepository
     private let goToDessertDetailsView: GoToDessertDetailsView
     @Published var isDataLoading: Bool
-    @Published var errorMessage: ErrorMessage?
+    @Published var errorMessage: ErrorMessage? 
     var desserts: [DessertPresentable]?
     
     // MARK: - Methods
@@ -26,6 +26,11 @@ final class HomeRootViewModel: ObservableObject, GetAllDessertsUseCase, ScreenSt
             self.goToDessertDetailsView = goToDessertDetailsView
             self.isDataLoading = false
         }
+    
+    func didTapOnTryAgain() {
+        setErrorMessage(nil)
+        setDesserts()
+    }
     
     func setDesserts() {
         Task { [weak self] in
