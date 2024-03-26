@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol DessertApis: RemoteAPI {
+public protocol DessertApis: RemoteAPI {
     func getAllDesserts() async throws -> Meals
     func getDessertDetails(by id: String) async throws -> MealDetails
 }

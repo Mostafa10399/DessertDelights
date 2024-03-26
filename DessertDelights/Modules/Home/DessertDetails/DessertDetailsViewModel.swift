@@ -11,7 +11,6 @@ final class DessertDetailsViewModel: ObservableObject, GetDessertDetailsUseCase,
     
     // MARK: - Properties
     
-    var errorMessage: ErrorMessage?
     private let dessertId: String
     var dessertRepository: DessertRepository
     var dessertName: String
@@ -20,6 +19,7 @@ final class DessertDetailsViewModel: ObservableObject, GetDessertDetailsUseCase,
     var dessertInstructions: String
     var dessertIngredient: [String]
     @Published var isDataLoading: Bool
+    @Published var errorMessage: ErrorMessage?
     
     // MARK: - Methods
     

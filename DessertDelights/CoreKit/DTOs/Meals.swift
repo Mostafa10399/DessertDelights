@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct Meals: Codable {
+public struct Meals: Codable {
     let meals: [Meal]
 }

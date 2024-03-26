@@ -3,4 +3,102 @@
    uuid = "34E1D90F-8852-4058-AF41-77CBC9C85834"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D167EA6C-B5B3-4B24-A45E-9F3A01BAB0C1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DessertDelightsTests/DessertDelightsDessertApiSpy.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "request(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D167EA6C-B5B3-4B24-A45E-9F3A01BAB0C1 - 24d9b6bd2c7cf7fd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for DessertDelights.RemoteAPI.request&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Swift.Decodable, &#x3c4;_1_0: Swift.Encodable&gt;(DessertDelights.RemoteService) async throws -&gt; &#x3c4;_1_0"
+                  moduleName = "DessertDelightsTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mtor/Desktop/DessertDelights/DessertDelightsTests/DessertDelightsDessertApiSpy.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "1584">
+               </Location>
+               <Location
+                  uuid = "D167EA6C-B5B3-4B24-A45E-9F3A01BAB0C1 - 24d9b6bd2c7cf7fd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for DessertDelights.RemoteAPI.request&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Swift.Decodable, &#x3c4;_1_0: Swift.Encodable&gt;(DessertDelights.RemoteService) async throws -&gt; &#x3c4;_1_0"
+                  moduleName = "DessertDelightsTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mtor/Desktop/DessertDelights/DessertDelightsTests/DessertDelightsDessertApiSpy.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "1568">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EA170320-478E-4C73-BDED-04931D7FD8D5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DessertDelightsTests/SpyDessertApis/DessertDelightsDessertApiSpy.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "request(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "438F5872-FFE3-4FA0-85FC-5E20D4A2CA95"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DessertDelightsTests/SpyDessertService/SpyDessertService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "requestConfiguration"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C194EF47-1746-4D23-A13D-F358C9A522B5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DessertDelightsTests/Extensions/AsyncTest+UnitTest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "runAsyncTest(named:in:at:withTimeout:test:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

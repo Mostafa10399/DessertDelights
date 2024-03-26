@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-enum DessertService {
+public enum DessertService {
     case getDesserts
     case getDessertDetails(id: String)
 }
@@ -17,7 +17,7 @@ extension DessertService: DessertDelightsService {
 
     var mainRoute: String { return "/api/json/v1/1/" }
     
-    var requestConfiguration: RequestConfiguration {
+    public var requestConfiguration: RequestConfiguration {
         switch self {
         case .getDesserts:
             let parameters = ["c": "Dessert"]

@@ -13,54 +13,148 @@ final class HomeRootViewModel_Tests: XCTestCase {
     
     // MARK: - Properties
     
-    private var homeRootViewModel: HomeRootViewModel?
+    var cancellable: Set<AnyCancellable> = []
     
     // MARK: - Methods
 
     override func setUpWithError() throws {
-        self.homeRootViewModel = HomeRootViewModel(
-            filterRepository: MainDessertRepository(remoteApi: DessertDelightsDessertApis()),
-            goToDessertDetailsView: HomeViewModel())
     }
 
     override func tearDownWithError() throws {
-        homeRootViewModel = nil
     }
-
-    func test_homeRootViewModel_setDesserts_dessertShouldBeAddedSuccessfully() throws {
+    
+    private func makeSut() -> HomeRootViewModel {
+        HomeRootViewModel(
+            dessertRepository: MainDessertRepositorySpy(spy: DessertDelightsDessertApiSuccessSpy()),
+            goToDessertDetailsView: HomeViewModel())
+    }
+    
+    func test_homeRootViewModel_notSetDesserts_whenNotCallingTheEndPoint() throws {
         // Arrange
-        var cancellable: Set<AnyCancellable> = []
-        guard let homeRootViewModel = self.homeRootViewModel else {
-            XCTFail()
-            return }
+        let homeRootViewModel = self.makeSut()
         // Act
         let expectation = expectation(description: "Set Desserts")
-        homeRootViewModel.setDesserts()
         homeRootViewModel.$isDataLoading
-            .dropFirst(2)
             .sink { _ in
                 expectation.fulfill()
             }
             .store(in: &cancellable)
         wait(for: [expectation], timeout: 2)
         // Assert
-        XCTAssertNotNil(homeRootViewModel.desserts)
+        XCTAssertNil(homeRootViewModel.desserts)
+    }
+
+    func test_homeRootViewModel_setDesserts_dessertShouldBeAddedSuccessfully() throws {
+        // Arrange
+        let sut = self.makeSut()
+        // Act
+        let expectation = expectation(description: "Set Desserts")
+        sut.setDesserts()
+        sut.$isDataLoading
+            .dropFirst(2)
+            .sink { _ in
+                expectation.fulfill()
+                
+            }
+            .store(in: &cancellable)
+        wait(for: [expectation], timeout: 2)
+        guard let dessert = sut.desserts else {
+            XCTFail()
+            return
+        }
+        // Assert
+        XCTAssertEqual(dessert.count, 65)
     }
     
-    
-    func test_homeRootViewModel_setDesserts_dessertShouldThrowError() throws {
+    func test_homeRootViewModel_setDesserts_shouldThrowError() throws {
         // Arrange
-        guard let homeRootViewModel = self.homeRootViewModel else {
-            XCTFail()
-            return }
+        let sut = HomeRootViewModel(
+            dessertRepository: MainDessertRepositorySpy(spy: DessertDelightsDessertApiFailSpy()),
+            goToDessertDetailsView: HomeViewModel())
+        var errorMessage: ErrorMessage?
         // Act
-        let expectation = expectation(description: "Throw Error")
-        homeRootViewModel.setDesserts()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+        let expectation = expectation(description: "Set Desserts")
+        sut.setDesserts()
+        sut.$errorMessage
+            .dropFirst()
+            .sink { error in
+                errorMessage = error
                 expectation.fulfill()
             }
+            .store(in: &cancellable)
         wait(for: [expectation], timeout: 2)
         // Assert
-        XCTAssertNotNil(homeRootViewModel.desserts)
+        XCTAssertNotNil(errorMessage)
     }
+    
+    func test_homeRootViewModel_setIsDataLoading_shouldBeTrue() throws {
+        // Arrange
+        let sut = self.makeSut()
+        let isDataLoading = true
+        // Act
+        let expectation = expectation(description: "Set Desserts")
+        sut.setIsDataLoading(isDataLoading)
+        sut.$isDataLoading
+            .dropFirst()
+            .sink { _ in
+                expectation.fulfill()
+            }
+            .store(in: &cancellable)
+        wait(for: [expectation], timeout: 2)
+        // Assert
+        XCTAssertTrue(sut.isDataLoading)
+    }
+    
+    func test_homeRootViewModel_setIsDataLoading_shouldBeFalse() throws {
+        // Arrange
+        let sut = self.makeSut()
+        let isDataLoading = false
+        // Act
+        let expectation = expectation(description: "Set Desserts")
+        sut.setIsDataLoading(isDataLoading)
+        sut.$isDataLoading
+            .dropFirst()
+            .sink { _ in
+                expectation.fulfill()
+            }
+            .store(in: &cancellable)
+        wait(for: [expectation], timeout: 2)
+        // Assert
+        XCTAssertFalse(sut.isDataLoading)
+    }
+    
+    func test_homeRootViewModel_setErrorMessage_errorMessageShouldHaveValue() throws {
+        // Arrange
+        let sut = self.makeSut()
+        let errorMessage = ErrorMessage(title: "title", message: "Message")
+        // Act
+        let expectation = expectation(description: #function)
+        sut.setErrorMessage(errorMessage)
+        sut.$errorMessage
+            .dropFirst()
+            .sink { _ in
+                expectation.fulfill()
+            }
+            .store(in: &cancellable)
+        wait(for: [expectation], timeout: 2)
+        // Assert
+        XCTAssertNotNil(sut.errorMessage)
+    }
+    
+    func test_homeRootViewModel_setErrorMessage_errorMessageShouldBeNil() throws {
+        // Arrange
+        let sut = self.makeSut()
+        // Act
+        let expectation = expectation(description: "Set Desserts")
+        sut.setErrorMessage(nil)
+        sut.$errorMessage
+            .sink { _ in
+                expectation.fulfill()
+            }
+            .store(in: &cancellable)
+        wait(for: [expectation], timeout: 2)
+        // Assert
+        XCTAssertNil(sut.errorMessage)
+    }
+    
 }
