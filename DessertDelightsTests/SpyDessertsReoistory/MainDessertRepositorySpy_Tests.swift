@@ -34,15 +34,17 @@ final class MainDessertRepositorySpy_Tests: XCTestCase {
         }
     }
     
-    func test_MainDessertRepositorySpy_getDessertDetails_shouldCheckDessertCount() throws {
+    func test_MainDessertRepositorySpy_getDessertDetails_getDessertDetailsSusseffully() throws {
         runAsyncTest { [weak self] in
             // Arrange
             guard let strongSelf = self else { return }
+            let id = "52893"
             let sut = strongSelf.makeSut()
             // Act
-            let desserts = try await sut.getAllDesserts().meals
+            let dessertDetails = try await sut.getDessertDetails(by: id)
+            let dessertId = (dessertDetails.meals[0]["idMeal"] ?? "") ?? ""
             // Assert
-            XCTAssertEqual(desserts.count, 65)
+            XCTAssertEqual(id, dessertId)
         }
     }
     

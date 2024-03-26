@@ -15,23 +15,19 @@ final class DessertDelightsDessertApiSpy: DessertApis {
     // MARK: - Methods
     
     func getAllDesserts() async throws -> Meals {
-         try await request(DessertService.getDesserts)
+         try await request(SpyDessertService.getDesserts)
     }
     
     func getDessertDetails(by id: String) async throws -> MealDetails {
-        try await request(DessertService.getDessertDetails(id: id))
+        try await request(SpyDessertService.getDessertDetails(id: id))
     }
     
 }
 
  extension RemoteAPI {
     func request<T: Codable>(_ service: RemoteService) async throws -> T {
-        var fileName = ""
-        if service.requestConfiguration.path.contains("filter.php") {
-            fileName = "DessertsList"
-            
-        }
-        if let task = Bundle.unitTestForDessertDelightsDessertApi.url(forResource: fileName, withExtension: "json") {
+        let fileName = service.baseUrl
+        if let task = Bundle.unitTestForDessertDelightsDessertApiSpy.url(forResource: fileName, withExtension: "json") {
             do {
             let data = try Data(contentsOf: task)
             let decoder = JSONDecoder()
@@ -41,7 +37,7 @@ final class DessertDelightsDessertApiSpy: DessertApis {
             throw error
         }
         } else {
-            throw ErrorMessage(title: "", message: "")
+            throw ErrorMessage(title: "error", message: "Not found")
         }
     }
 }
