@@ -133,6 +133,42 @@ final class DessertDetailsViewModel_Tests: XCTestCase {
         XCTAssertNil(sut.errorMessage)
     }
 
+    func test_dessertDetailsViewModel_didTapOnTryAgain_shouldGetDessertsSuccessfullyWhenTappingOnTryAgain() throws {
+        // Arrange
+        let sut = self.makeSut(id: "52893")
+        let expectation = expectation(description: #function)
+        // Act
+        sut.didTapOnTryAgain()
+        sut.$isDataLoading
+            .dropFirst(2)
+            .sink { data in
+                print(data)
+                expectation.fulfill()
+            }
+            .store(in: &cancellable)
+        wait(for: [expectation], timeout: 2)
+        // Assert
+        XCTAssertNil(sut.errorMessage)
+    }
     
+    func test_dessertDetailsViewModel_didTapOnTryAgain_shouldFailAndThrowError() throws {
+        // Arrange
+        let sut = DessertDetailsViewModel(
+            dessertId: "52893",
+            dessertRepository: MainDessertRepositorySpy(spy: DessertDelightsDessertApiFailSpy()))
+        let expectation = expectation(description: #function)
+        // Act
+        sut.didTapOnTryAgain()
+        sut.$isDataLoading
+            .dropFirst(2)
+            .sink { data in
+                print(data)
+                expectation.fulfill()
+            }
+            .store(in: &cancellable)
+        wait(for: [expectation], timeout: 2)
+        // Assert
+        XCTAssertNotNil(sut.errorMessage)
+    }
 
 }
