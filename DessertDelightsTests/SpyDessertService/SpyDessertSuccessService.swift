@@ -9,12 +9,12 @@ import Foundation
 import Alamofire
 import DessertDelights
 
-enum SpyDessertService {
+enum SpyDessertSuccessService {
     case getDesserts
     case getDessertDetails(id: String)
 }
 
-extension SpyDessertService: RemoteService {
+extension SpyDessertSuccessService: RemoteService {
     var baseUrl: String {
         switch self {
         case .getDesserts:

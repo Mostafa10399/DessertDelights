@@ -25,7 +25,7 @@ final class HomeRootViewModel_Tests: XCTestCase {
     
     private func makeSut() -> HomeRootViewModel {
         HomeRootViewModel(
-            dessertRepository: MainDessertRepositorySpy(spy: DessertDelightsDessertApiSpy()),
+            dessertRepository: MainDessertRepositorySpy(spy: DessertDelightsDessertApiSuccessSpy()),
             goToDessertDetailsView: HomeViewModel())
     }
     

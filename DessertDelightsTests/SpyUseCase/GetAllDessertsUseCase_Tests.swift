@@ -19,7 +19,7 @@ final class GetAllDessertsUseCase_Tests: XCTestCase {
     }
     
     private func makeSut() -> GetAllDessertsUseCase {
-        SpyGetAllDessertsUseCase(dessertRepository: MainDessertRepositorySpy(spy: DessertDelightsDessertApiSpy()))
+        SpyGetAllDessertsUseCase(dessertRepository: MainDessertRepositorySpy(spy: DessertDelightsDessertApiSuccessSpy()))
     }
     
     func test_GetAllDessertUseCase_getAllDesserts_shouldReturnDessertsSuccessffully() {

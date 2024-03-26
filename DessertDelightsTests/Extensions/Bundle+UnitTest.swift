@@ -9,6 +9,6 @@ import Foundation
 
 extension Bundle {
     public class var unitTestForDessertDelightsDessertApiSpy: Bundle {
-        return Bundle(for: DessertDelightsDessertApiSpy.self)
+        return Bundle(for: DessertDelightsDessertApiSuccessSpy.self)
     }
 }

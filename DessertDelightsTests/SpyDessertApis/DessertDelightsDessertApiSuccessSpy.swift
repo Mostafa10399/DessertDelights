@@ -8,18 +8,18 @@
 import Foundation
 import DessertDelights
 
-final class DessertDelightsDessertApiSpy: DessertApis {
+final class DessertDelightsDessertApiSuccessSpy: DessertApis {
 
     // MARK: - Properties
     
     // MARK: - Methods
     
     func getAllDesserts() async throws -> Meals {
-         try await request(SpyDessertService.getDesserts)
+         try await request(SpyDessertSuccessService.getDesserts)
     }
     
     func getDessertDetails(by id: String) async throws -> MealDetails {
-        try await request(SpyDessertService.getDessertDetails(id: id))
+        try await request(SpyDessertSuccessService.getDessertDetails(id: id))
     }
     
 }
@@ -34,7 +34,7 @@ final class DessertDelightsDessertApiSpy: DessertApis {
             let jsonData = try decoder.decode(T.self, from: data)
             return jsonData
         } catch {
-            throw error
+            throw ErrorMessage(title: "error", message: error.localizedDescription)
         }
         } else {
             throw ErrorMessage(title: "error", message: "Not found")

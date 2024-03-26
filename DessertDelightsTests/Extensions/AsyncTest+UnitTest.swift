@@ -25,7 +25,6 @@ extension XCTestCase {
             } catch {
                 errorHandler(error)
             }
-
             expectation.fulfill()
         }
 
