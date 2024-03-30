@@ -17,7 +17,7 @@
 
 To clone DessertDelights the first time, simply run the command:
 
-⁠ bash
+bash 
 $ git clone https://github.com/Mostafa10399/DessertDelights
  ⁠
 
@@ -39,7 +39,7 @@ $ git clone https://github.com/Mostafa10399/DessertDelights
 
 •⁠  ⁠Repository design pattern
 
-•⁠  ⁠Coorinator design pattern
+•⁠  ⁠Coordinator design pattern
 
 •⁠  ⁠Codable
 
