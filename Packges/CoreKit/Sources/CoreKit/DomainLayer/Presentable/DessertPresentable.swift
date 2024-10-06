@@ -7,14 +7,20 @@
 
 import Foundation
 
-struct DessertPresentable {
+public struct DessertPresentable {
     let id: String
-    let dessertImage: URL?
-    let dessertName: String
+    let imageUrl: URL?
+    let name: String
     
-    init(meal: Meal) {
-        self.id = meal.id
-        self.dessertImage = URL(string: meal.mealImage)
-        self.dessertName = meal.mealName
+    init(dessert: Dessert) {
+        self.id = dessert.id
+        self.imageUrl = dessert.imageUrl
+        self.name = dessert.name
+    }
+}
+
+extension Array where Element == Dessert {
+    func convertToDessertPresentable() -> [DessertPresentable] {
+        return self.map { DessertPresentable(dessert: $0) }
     }
 }

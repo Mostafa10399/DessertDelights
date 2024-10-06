@@ -8,5 +8,5 @@
 import Foundation
 
 public struct Meals: Codable {
-    let meals: [Meal]
+   public let meals: [Meal]
 }

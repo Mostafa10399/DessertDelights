@@ -26,6 +26,8 @@ let package = Package(
         ),
         .testTarget(
             name: "CoreKitTests",
-            dependencies: ["CoreKit"]),
+            dependencies: ["CoreKit"],
+            resources: [.process("Mocks/")])
+        ,
     ]
 )

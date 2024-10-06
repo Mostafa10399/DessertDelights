@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DessertDetailsPresentable {
+public struct DessertDetailsPresentable {
     let dessertName: String
     let dessertImageUrl: URL?
     let dessertArea: String
