@@ -9,6 +9,7 @@ import Foundation
 import XCTest
 import protocol CoreKit.DessertApis
 import struct CoreKit.Meals
+import struct CoreKit.Meal
 import struct CoreKit.MealDetails
 
 final class DessertApis_Tests: XCTestCase {
@@ -36,21 +37,26 @@ final class DessertApis_Tests: XCTestCase {
         }
     }
     
+    func test_DessertApis_getDessertDetails_getDataSuccessfully() async {
+        // Arrange
+        let sut = makeSut()
+        // Act
+        do {
+            let dessertId = try await sut.getDessertDetails(by: "52893")
+                .details
+                .desert["idMeal"]
+            // Assert
+            XCTAssertEqual(dessertId, "52893")
+        } catch {
+            // Assert
+            XCTFail(error.localizedDescription)
+        }
+    }
+    
     private func makeSut() -> DessertApis {
         SpyDessertDelightsDessertApis()
     }
     
 }
 
-internal class SpyDessertDelightsDessertApis: DessertApis {
-    
-    func getAllDesserts() async throws -> CoreKit.Meals {
-        try await request(SpyDessertService.getDesserts)
-    }
-    
-    func getDessertDetails(by id: String) async throws -> CoreKit.MealDetails {
-        try await request(SpyDessertService.getDessertDetails(id: id))
-    }
-    
-    
-}
+

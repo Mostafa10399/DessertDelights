@@ -7,12 +7,12 @@
 
 import Foundation
 
-enum APIError: Error {
+public enum APIError: Error {
     case badRequest
     case serverError(statusCode: Int)
     case tooManyRequests(remaining: Int)
     case unAuthorized
-    case decodingError(Error)
+    case decodingError
     case timeout
     case noInternetConnection
     case unknown(Error)
@@ -28,8 +28,8 @@ enum APIError: Error {
             return "Too many requests. Please wait and try again. Remaining: \(remaining)."
         case .unAuthorized:
             return "Unauthorized access. Please check your credentials."
-        case let .decodingError(error):
-            return "Decoding error: \(error.localizedDescription)."
+        case .decodingError:
+            return "Decoding error."
         case .timeout:
             return "The request timed out. Please try again."
         case .noInternetConnection:

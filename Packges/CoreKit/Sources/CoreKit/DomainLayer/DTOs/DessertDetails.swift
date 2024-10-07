@@ -8,5 +8,5 @@
 import Foundation
 
 public struct DessertDetails {
-    let deserts: [[String: String?]]
+    public let desert: [String: String?]
 }

@@ -13,6 +13,7 @@ import struct NetworkLayer.UrlEncoding
 enum SpyDessertService {
     case getDesserts
     case getDessertDetails(id: String)
+    case invalidData
 }
 
 extension SpyDessertService: RemoteService {
@@ -22,12 +23,14 @@ extension SpyDessertService: RemoteService {
             return "DessertsList"
         case .getDessertDetails(_):
             return "DessertDetails"
+        case .invalidData:
+            return "invalidData"
         }
     }
     
     var requestConfiguration: RequestConfiguration {
         switch self {
-        case .getDesserts:
+        case .getDesserts, .invalidData:
             return RequestConfiguration(path: "")
         case let .getDessertDetails(id):
             return RequestConfiguration(
@@ -36,6 +39,4 @@ extension SpyDessertService: RemoteService {
                 encoding: UrlEncoding.queryString)
         }
     }
-    
-    
 }

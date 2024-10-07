@@ -9,7 +9,7 @@ import Foundation
 
 public struct MealDetails: Codable {
     let meals: [[String: String?]]
-    var details: DessertDetails {
-        DessertDetails(deserts: meals)
+    public var details: DessertDetails {
+        DessertDetails(desert: meals[0])
     }
 }

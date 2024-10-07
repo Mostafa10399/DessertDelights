@@ -15,6 +15,6 @@ public protocol GetDessertDetailsUseCase: AnyObject {
 extension GetDessertDetailsUseCase {
     func getDessertDetails(by id: String) async throws -> DessertDetailsPresentable {
         let details = try await dessertRepository.getDessertDetails(by: id)
-        return DessertDetailsPresentable(dessert: details.deserts[0])
+        return DessertDetailsPresentable(dessert: details.desert[0])
     }
 }
