@@ -407,6 +407,13 @@
 			path = "Extenstions ";
 			sourceTree = "<group>";
 		};
+		DE51ECAB2CB503EA00A5FBEB /* Features */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
 		DE566A3F2BAF61D200DABE30 /* CoreKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -550,6 +557,7 @@
 		DE7AD0D82CAE8606000A3A54 /* Packges */ = {
 			isa = PBXGroup;
 			children = (
+				DE51ECAB2CB503EA00A5FBEB /* Features */,
 				DEEE716A2CB02BC000715BC4 /* CoreKit */,
 				DEEE71692CAFA06D00715BC4 /* NetworkLayer */,
 			);
