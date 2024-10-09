@@ -10,6 +10,7 @@ import protocol CoreKit.GetDessertDetailsUseCase
 import protocol CoreKit.DessertRepository
 import struct CoreKit.DessertDetailsPresentable
 import protocol Commons.BaseViewModel
+import enum NetworkLayer.APIError
 
 final class DessertDetailsViewModel: BaseViewModel, GetDessertDetailsUseCase {
     
@@ -23,7 +24,7 @@ final class DessertDetailsViewModel: BaseViewModel, GetDessertDetailsUseCase {
     var dessertInstructions: String
     var dessertIngredient: [String]
     @Published var isDataLoading: Bool
-    @Published var errorMessage: Error?
+    @Published var errorMessage: APIError?
     
     // MARK: - Methods
     
@@ -52,7 +53,7 @@ final class DessertDetailsViewModel: BaseViewModel, GetDessertDetailsUseCase {
                 await strongSelf.setIsDataLoading(true)
                 let dessertData = try await strongSelf.getDessertDetails(by: strongSelf.dessertId)
                 strongSelf.setScreenData(dessertDetails: dessertData)
-            } catch {
+            } catch let error as APIError {
                 await strongSelf.setErrorMessage(error)
             }
             await strongSelf.setIsDataLoading(false)
@@ -64,7 +65,7 @@ final class DessertDetailsViewModel: BaseViewModel, GetDessertDetailsUseCase {
         self.setDessertImage(dessertDetails.dessertImageUrl)
         self.setDessertArea(dessertDetails.dessertArea)
         self.setDessertInstructions(dessertDetails.instructions)
-        self.setDessertIngredient(dessertDetails.ingredient)
+        self.setDessertIngredient(dessertDetails.ingredients)
     }
     
     private func setDessertName(_ name: String) {

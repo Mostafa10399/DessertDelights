@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  DessertDetailsPresentable.swift
 //  
 //
 //  Created by Mostafa Mahmoud on 05/10/2024.
@@ -12,26 +12,30 @@ public struct DessertDetailsPresentable {
     public let dessertImageUrl: URL?
     public let dessertArea: String
     public let instructions: String
-    public var ingredient: [String]
-    
-    init(dessert: [String: String?]) {
-        self.dessertName = (dessert["strMeal"] ?? "") ?? ""
-        if let dessertImageUrl = dessert["strMealThumb"], let urlString = dessertImageUrl {
-            self.dessertImageUrl = URL(string: urlString)
+    public var ingredients: [String]
+
+    init(dessert: [String: Any]) {
+        self.dessertName = dessert["strMeal"] as? String ?? ""
+        if let imageUrlString = dessert["strMealThumb"] as? String {
+            self.dessertImageUrl = URL(string: imageUrlString)
         } else {
             self.dessertImageUrl = nil
         }
-        self.dessertArea = (dessert["strArea"] ?? "") ?? ""
-        self.instructions = (dessert["strInstructions"] ?? "") ?? ""
-        var ingredient: [String] = []
-        for index in 1 ... 20 {
-            if let ingredientPerIndex = dessert["strIngredient\(index)"], let measurePerIndex = dessert["strMeasure\(index)"]  {
-                if let ingredientPerIndex = ingredientPerIndex, let measurePerIndex = measurePerIndex, !ingredientPerIndex.isEmpty, !ingredientPerIndex.isEmpty {
-                    let ingredientWithItsMeasures = "\(ingredientPerIndex) : \(measurePerIndex)"
-                    ingredient.append(ingredientWithItsMeasures)
+        self.dessertArea = dessert["strArea"] as? String ?? ""
+        self.instructions = dessert["strInstructions"] as? String ?? ""
+
+        var ingredientsList: [String] = []
+        
+        // Dynamically find ingredients and their measures
+        for (key, value) in dessert {
+            if key.starts(with: "strIngredient"), let ingredient = value as? String, !ingredient.isEmpty {
+                let measureKey = key.replacingOccurrences(of: "strIngredient", with: "strMeasure")
+                if let measure = dessert[measureKey] as? String, !measure.isEmpty {
+                    ingredientsList.append("\(ingredient): \(measure)")
                 }
             }
         }
-        self.ingredient = ingredient
+        
+        self.ingredients = ingredientsList
     }
 }

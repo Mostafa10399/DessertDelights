@@ -42,7 +42,7 @@ struct HomeRootView: View {
             }
         }
         .displayLoader(isLoading: viewModel.isDataLoading)
-        .displayError(errorMessage: viewModel.errorMessage, isFullScreen: false) {
+        .displayError(errorMessage: viewModel.errorMessage) {
             viewModel.didTapOnTryAgain()
         }
     }

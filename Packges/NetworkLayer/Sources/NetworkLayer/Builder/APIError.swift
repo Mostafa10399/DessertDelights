@@ -19,10 +19,10 @@ public enum APIError: Error {
     case emptyDate
     case outdated
     
-    var localizedDescription: String {
+    public var localizedDescription: String {
         switch self {
         case .badRequest:
-            return "The request was invalid. Please check your input and try again."
+            return "Invalid Request try again later"
         case let .serverError(statusCode):
             return "Server error with status code \(statusCode). Please try again later."
         case let .tooManyRequests(remaining):

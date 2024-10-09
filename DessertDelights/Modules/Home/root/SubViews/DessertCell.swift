@@ -19,7 +19,7 @@ struct DessertCell: View {
     // MARK: - CodeView
     
     var body: some View {
-        CustomWebImage(url: dessert.imageUrl, placeholder: {
+        CustomWebImage(url: dessert.imageUrl, fixedSize: CGSize(width: width, height: 200), placeholder: {
             Image(.launchBackground)
                 .resizable()
         })

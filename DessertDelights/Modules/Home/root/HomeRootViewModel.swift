@@ -10,15 +10,16 @@ import protocol CoreKit.GetAllDessertsUseCase
 import protocol CoreKit.DessertRepository
 import struct CoreKit.DessertPresentable
 import protocol Commons.BaseViewModel
+import enum NetworkLayer.APIError
 
-final class HomeRootViewModel: ObservableObject, GetAllDessertsUseCase, BaseViewModel {
+final class HomeRootViewModel: ObservableObject, GetAllDessertsUseCase, BaseViewModel {    
         
     // MARK: - Properties
     
     var dessertRepository: DessertRepository
     private let goToDessertDetailsView: GoToDessertDetailsView
     @Published var isDataLoading: Bool
-    @Published var errorMessage: Error?
+    @Published var errorMessage: APIError?
     @Published var desserts: [DessertPresentable]?
     
     // MARK: - Methods
@@ -45,7 +46,7 @@ final class HomeRootViewModel: ObservableObject, GetAllDessertsUseCase, BaseView
             do {
                 strongSelf.setIsDataLoading(true)
                 strongSelf.desserts = try await strongSelf.getAllDesserts()
-            } catch {
+            } catch let error as APIError {
                 strongSelf.setErrorMessage(error)
             }
         }

@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Commons
+import enum NetworkLayer.APIError
 
 struct ErrorMessageView: View {
     var imageName: String
@@ -86,7 +87,7 @@ struct ErrorDisplay: ViewModifier {
 }
 
 extension View {
-    func displayError(errorMessage: Error?,
+    func displayError(errorMessage: APIError?,
                       isFullScreen: Bool = true,
                       onTapAction: @escaping () -> Void) -> some View {
         self
@@ -102,15 +103,5 @@ extension View {
                 )
             
         }
-    }
-}
-
-
-struct ErrorMessageView_Previews: PreviewProvider {
-    static var previews: some View {
-        VStack {
-            Text("Error")
-        }
-        .displayError(errorMessage: ErrorMessage(title: "test", message: "test"), isFullScreen: false, onTapAction: {})
     }
 }

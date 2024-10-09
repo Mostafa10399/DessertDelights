@@ -6,12 +6,13 @@
 //
 
 import Foundation
+import enum NetworkLayer.APIError
 
 public protocol BaseViewModel: AnyObject, ObservableObject {
     var isDataLoading: Bool { set get }
-    var errorMessage: Error? { set get }
+    var errorMessage: APIError? { set get }
     func setIsDataLoading(_ value: Bool)
-    func setErrorMessage(_ value: Error?)
+    func setErrorMessage(_ value: APIError?)
 }
 
 extension BaseViewModel {
@@ -23,7 +24,7 @@ extension BaseViewModel {
     }
     
     @MainActor
-    public func setErrorMessage(_ value: Error?) {
+    public func setErrorMessage(_ value: APIError?) {
         self.errorMessage = value
     }
 }
