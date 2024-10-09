@@ -10,6 +10,12 @@ import Foundation
 public struct MealDetails: Codable {
     let meals: [[String: String?]]
     public var details: DessertDetails {
-        DessertDetails(desert: meals[0])
+        meals.toModel()
+    }
+}
+private extension Array where Element == [String: String?] {
+    func toModel() -> DessertDetails {
+        guard self.count > 0 else {return DessertDetails(desert: [:]) }
+        return DessertDetails(desert: self.first!)
     }
 }

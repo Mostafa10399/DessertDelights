@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Commons
 
 struct ErrorMessageView: View {
     var imageName: String
@@ -85,16 +86,17 @@ struct ErrorDisplay: ViewModifier {
 }
 
 extension View {
-    func displayError(errorMessage: ErrorMessage?,
+    func displayError(errorMessage: Error?,
                       isFullScreen: Bool = true,
                       onTapAction: @escaping () -> Void) -> some View {
-        self.if(errorMessage != nil) { view in
+        self
+            .if(errorMessage != nil) { view in
             view
                 .modifier(
                     ErrorDisplay(
-                        imageName: errorMessage?.errorImage ?? "exclamationmark.bubble.fill",
-                        title: errorMessage!.title,
-                        message: errorMessage!.message,
+                        imageName: "exclamationmark.bubble.fill",
+                        title: "",
+                        message: errorMessage!.localizedDescription,
                         isFullScreen: isFullScreen,
                         onTapAction: onTapAction)
                 )

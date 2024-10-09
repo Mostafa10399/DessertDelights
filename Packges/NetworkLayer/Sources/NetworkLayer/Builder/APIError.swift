@@ -17,6 +17,7 @@ public enum APIError: Error {
     case noInternetConnection
     case unknown(Error)
     case emptyDate
+    case outdated
     
     var localizedDescription: String {
         switch self {
@@ -36,6 +37,8 @@ public enum APIError: Error {
             return "No internet connection. Please check your network settings."
         case let .unknown(error):
             return "An unknown error occurred: \(error.localizedDescription)."
+        case .outdated:
+            return "Out dated"
         case .emptyDate:
             return "empty data"
         }

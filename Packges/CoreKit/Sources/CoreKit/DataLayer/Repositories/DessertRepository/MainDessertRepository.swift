@@ -8,7 +8,7 @@
 import Foundation
 
 public final class MainDessertRepository: DessertRepository {
-
+    
     // MARK: - Properties
     
     private let remoteApi: DessertApis
@@ -20,10 +20,15 @@ public final class MainDessertRepository: DessertRepository {
     }
     
     public func getAllDesserts() async throws -> [Dessert] {
-        try await remoteApi.getAllDesserts().meals.map { $0.dessert }
+        try await remoteApi
+            .getAllDesserts()
+            .meals
+            .map{ $0.dessert }
     }
     
     public func getDessertDetails(by id: String) async throws -> DessertDetails {
-        try await remoteApi.getDessertDetails(by: id).details
+        try await remoteApi
+            .getDessertDetails(by: id)
+            .details
     }
 }

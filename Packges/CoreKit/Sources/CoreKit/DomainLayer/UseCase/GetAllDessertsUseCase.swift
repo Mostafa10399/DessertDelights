@@ -14,7 +14,7 @@ public protocol GetAllDessertsUseCase: AnyObject {
 
 extension GetAllDessertsUseCase {
     
-    func getAllDesserts() async throws -> [DessertPresentable] {
+    public func getAllDesserts() async throws -> [DessertPresentable] {
         let desserts = try await dessertRepository.getAllDesserts()
         return desserts
             .convertToDessertPresentable()

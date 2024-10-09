@@ -8,9 +8,9 @@
 import Foundation
 
 public struct DessertPresentable {
-    let id: String
-    let imageUrl: URL?
-    let name: String
+    public let id: String
+    public let imageUrl: URL?
+    public let name: String
     
     init(dessert: Dessert) {
         self.id = dessert.id

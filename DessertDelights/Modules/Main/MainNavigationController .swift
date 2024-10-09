@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import class Commons.NiblessViewController
 
 final class MainNavigationController: NiblessViewController {
     

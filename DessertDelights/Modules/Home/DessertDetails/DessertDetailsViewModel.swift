@@ -6,8 +6,12 @@
 //
 
 import Foundation
+import protocol CoreKit.GetDessertDetailsUseCase
+import protocol CoreKit.DessertRepository
+import struct CoreKit.DessertDetailsPresentable
+import protocol Commons.BaseViewModel
 
-final class DessertDetailsViewModel: ObservableObject, GetDessertDetailsUseCase, ScreenStateProtocol {
+final class DessertDetailsViewModel: BaseViewModel, GetDessertDetailsUseCase {
     
     // MARK: - Properties
     
@@ -19,7 +23,7 @@ final class DessertDetailsViewModel: ObservableObject, GetDessertDetailsUseCase,
     var dessertInstructions: String
     var dessertIngredient: [String]
     @Published var isDataLoading: Bool
-    @Published var errorMessage: ErrorMessage?
+    @Published var errorMessage: Error?
     
     // MARK: - Methods
     
@@ -35,6 +39,7 @@ final class DessertDetailsViewModel: ObservableObject, GetDessertDetailsUseCase,
             self.dessertIngredient = []
         }
     
+    @MainActor
     func didTapOnTryAgain() {
         setErrorMessage(nil)
         fetchDessertDetails()
@@ -43,14 +48,14 @@ final class DessertDetailsViewModel: ObservableObject, GetDessertDetailsUseCase,
     func fetchDessertDetails() {
         Task { [weak self] in
             guard let strongSelf = self else { return }
-            defer { strongSelf.setIsDataLoading(false) }
             do {
-                strongSelf.setIsDataLoading(true)
+                await strongSelf.setIsDataLoading(true)
                 let dessertData = try await strongSelf.getDessertDetails(by: strongSelf.dessertId)
                 strongSelf.setScreenData(dessertDetails: dessertData)
-            } catch let errorMessage as ErrorMessage {
-                strongSelf.setErrorMessage(errorMessage)
+            } catch {
+                await strongSelf.setErrorMessage(error)
             }
+            await strongSelf.setIsDataLoading(false)
         }
     }
     

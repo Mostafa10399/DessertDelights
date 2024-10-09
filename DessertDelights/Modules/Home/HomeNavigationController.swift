@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Combine
+import class Commons.NiblessNavigationController
 
 final class HomeNavigationController: NiblessNavigationController {
     

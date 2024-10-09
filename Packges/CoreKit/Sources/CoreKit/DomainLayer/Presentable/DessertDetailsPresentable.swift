@@ -8,11 +8,11 @@
 import Foundation
 
 public struct DessertDetailsPresentable {
-    let dessertName: String
-    let dessertImageUrl: URL?
-    let dessertArea: String
-    let instructions: String
-    var ingredient: [String]
+    public let dessertName: String
+    public let dessertImageUrl: URL?
+    public let dessertArea: String
+    public let instructions: String
+    public var ingredient: [String]
     
     init(dessert: [String: String?]) {
         self.dessertName = (dessert["strMeal"] ?? "") ?? ""

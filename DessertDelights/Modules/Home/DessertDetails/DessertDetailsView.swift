@@ -93,6 +93,3 @@ struct DessertDetailsView: View {
     }
 }
 
-#Preview {
-    DessertDetailsView(viewModel: DessertDetailsViewModel(dessertId: "52909", dessertRepository: MainDessertRepository(remoteApi: DessertDelightsDessertApis())))
-}

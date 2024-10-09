@@ -47,9 +47,3 @@ struct HomeRootView: View {
         }
     }
 }
-
-#Preview {
-    HomeRootView(viewModel: HomeRootViewModel(dessertRepository: MainDessertRepository(remoteApi: DessertDelightsDessertApis()), goToDessertDetailsView: HomeViewModel()))
-}
-
-

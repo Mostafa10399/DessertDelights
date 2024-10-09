@@ -8,6 +8,7 @@
 import SwiftUI
 import Combine
 import UIKit
+import Commons
 
 final class LaunchNavigationController: NiblessViewController {
     
@@ -55,7 +56,8 @@ final class LaunchNavigationController: NiblessViewController {
     }
     
     private func presetLaunchRootView() {
-        let vc = UIHostingController(rootView: self.lunchRootView).with { $0.modalPresentationStyle = .overFullScreen }
+        let vc = UIHostingController(rootView: self.lunchRootView)
+            .with { $0.modalPresentationStyle = .overFullScreen }
         self.addFullScreen(childViewController: vc, animation: false)
     }
     

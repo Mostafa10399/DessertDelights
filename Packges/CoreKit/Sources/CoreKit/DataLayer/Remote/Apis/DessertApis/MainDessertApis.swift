@@ -7,11 +7,13 @@
 
 import Foundation
 
-internal final class DessertDelightsDessertApis: DessertApis {
+public final class DessertDelightsDessertApis: DessertApis {
 
     // MARK: - Properties
     
     // MARK: - Methods
+    
+    public init() {}
     
    public func getAllDesserts() async throws -> Meals {
          try await request(DessertService.getDesserts)

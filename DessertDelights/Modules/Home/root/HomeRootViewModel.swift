@@ -6,16 +6,20 @@
 //
 
 import Foundation
+import protocol CoreKit.GetAllDessertsUseCase
+import protocol CoreKit.DessertRepository
+import struct CoreKit.DessertPresentable
+import protocol Commons.BaseViewModel
 
-final class HomeRootViewModel: ObservableObject, GetAllDessertsUseCase, ScreenStateProtocol {
+final class HomeRootViewModel: ObservableObject, GetAllDessertsUseCase, BaseViewModel {
         
     // MARK: - Properties
     
     var dessertRepository: DessertRepository
     private let goToDessertDetailsView: GoToDessertDetailsView
     @Published var isDataLoading: Bool
-    @Published var errorMessage: ErrorMessage? 
-    var desserts: [DessertPresentable]?
+    @Published var errorMessage: Error?
+    @Published var desserts: [DessertPresentable]?
     
     // MARK: - Methods
     
@@ -27,20 +31,22 @@ final class HomeRootViewModel: ObservableObject, GetAllDessertsUseCase, ScreenSt
             self.isDataLoading = false
         }
     
+    @MainActor
     func didTapOnTryAgain() {
         setErrorMessage(nil)
         setDesserts()
     }
     
+    
     func setDesserts() {
-        Task { [weak self] in
+        Task { @MainActor [weak self] in
             guard let strongSelf = self else { return }
             defer { strongSelf.setIsDataLoading(false) }
             do {
                 strongSelf.setIsDataLoading(true)
                 strongSelf.desserts = try await strongSelf.getAllDesserts()
-            } catch let errorMessage as ErrorMessage {
-                strongSelf.setErrorMessage(errorMessage)
+            } catch {
+                strongSelf.setErrorMessage(error)
             }
         }
     }

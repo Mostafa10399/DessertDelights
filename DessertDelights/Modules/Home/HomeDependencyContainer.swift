@@ -6,6 +6,9 @@
 //
 
 import Foundation
+import protocol CoreKit.DessertRepository
+import class CoreKit.DessertDelightsDessertApis
+import class CoreKit.MainDessertRepository
 
 final class HomeDependencyContainer {
     
