@@ -1,22 +1,25 @@
 //
-//  DessertDelightsApp.swift
+//  NavigationAppDelegate.swift
 //  DessertDelights
 //
-//  Created by Mostafa Mahmoud on 21/03/2024.
+//  Created by Mostafa on 7/2/25.
 //
 
-import SwiftUI
+import UIKit
 
-@main
-class AppDelegate: NSObject, UIApplicationDelegate {
+class NavigationAppDelegate: AppDelegateType {
     
     // MARK: - Properties
     
+    static let shared = NavigationAppDelegate()
+        
     var window: UIWindow?
     let mainDependencyContainer = MainDependencyContainer()
     
     // MARK: - Methods
     
+    private override init() { }
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         setupRootController(
@@ -31,8 +34,8 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     
 }
 
-extension AppDelegate{
-    func setupRootController(controller: UIViewController, navigationBarHidden: Bool) {
+extension NavigationAppDelegate{
+    private func setupRootController(controller: UIViewController, navigationBarHidden: Bool) {
             if let window = self.window {
                 window.rootViewController = controller
                 window.makeKeyAndVisible()

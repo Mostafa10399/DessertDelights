@@ -21,7 +21,10 @@ let package = Package(
         .target(
             name: "Commons",
             dependencies: ["Kingfisher", 
-                .product(name: "NetworkLayer", package: "NetworkLayer")]),
+                .product(name: "NetworkLayer", package: "NetworkLayer")],
+            resources: [
+                .process("Resources/Fonts"),
+            ]),
         .testTarget(
             name: "CommonsTests",
             dependencies: ["Commons"]),
